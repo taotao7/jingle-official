@@ -19,6 +19,10 @@
     "career": "Career",
     "publication": "Publication",
     "blog": "Blog"
+  },
+  "banner": {
+    "title": "Global Vision",
+    "subtitle": "Making global services smarter and more reliable"
   }
 }
 
