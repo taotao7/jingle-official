@@ -1,0 +1,24 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "price": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact",
+    "career": "Career",
+    "publication": "Publication"
+  },
+  "nav": {
+    "home": "Home",
+    "pages": "Pages",
+    "about": "About",
+    "services": "Services",
+    "price": "Pricing",
+    "contact": "Contact",
+    "career": "Career",
+    "publication": "Publication",
+    "blog": "Blog"
+  }
+}
+

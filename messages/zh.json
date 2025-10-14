@@ -1,0 +1,24 @@
+{
+  "common": {
+    "home": "首页",
+    "about": "关于",
+    "services": "服务",
+    "price": "价格",
+    "blog": "博客",
+    "contact": "联系",
+    "career": "职位",
+    "publication": "出版"
+  },
+  "nav": {
+    "home": "首页",
+    "pages": "页面",
+    "about": "关于",
+    "services": "服务",
+    "price": "价格",
+    "contact": "联系",
+    "career": "职位",
+    "publication": "出版",
+    "blog": "博客"
+  }
+}
+
