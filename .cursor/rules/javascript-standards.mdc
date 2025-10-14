@@ -1,0 +1,136 @@
+---
+globs: *.js,*.jsx
+---
+
+# JavaScript/JSX 编码规范
+
+## 代码风格
+
+### 组件定义
+
+- 使用箭头函数定义组件
+- 使用默认参数值提供 props 默认值
+- 组件使用 `export default` 导出
+
+```javascript
+const ComponentName = ({
+  title = "默认标题",
+  subtitle = "默认副标题",
+  dark = false,
+}) => {
+  return (
+    // JSX 内容
+  );
+};
+export default ComponentName;
+```
+
+### 导入顺序
+
+1. React 和 Next.js 核心库
+2. 第三方库
+3. 样式文件
+4. 本地组件和工具函数
+
+```javascript
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import Swiper from "swiper";
+import "./styles.css";
+import Component from "@/components/Component";
+```
+
+### 命名规范
+
+- **组件文件**: PascalCase (例如: `Banner.js`, `CallToAction.js`)
+- **组件名称**: PascalCase (例如: `const Banner = () => {}`)
+- **工具函数文件**: camelCase (例如: `sliderProps.js`, `useClickOutside.js`)
+- **Hook**: 以 `use` 开头 (例如: `useClickOutside`)
+- **CSS 类名**: kebab-case with `mil-` 前缀 (例如: `mil-banner`, `mil-text-gradient`)
+
+### JSX 规范
+
+- 使用双引号 `"` 包裹 JSX 属性
+- 自闭合标签使用 `/>` 结尾
+- 条件渲染使用三元表达式或 `&&` 运算符
+- 使用 Next.js `<Link>` 组件处理内部路由
+
+```javascript
+// ✅ 好的做法
+<Link href="/about" className="mil-btn">
+  About Us
+</Link>
+
+<img src={img} alt="banner" />
+
+<div className={`mil-banner ${dark ? "mil-dark-2" : ""}`}>
+```
+
+### 状态管理
+
+- 优先使用 React Hooks (`useState`, `useEffect`, `useRef` 等)
+- 复杂状态逻辑考虑使用 `useReducer`
+- 全局状态可以使用 React Context
+
+### 事件处理
+
+- 事件处理函数使用 `handle` 前缀 (例如: `handleClick`, `handleSubmit`)
+- 避免在 JSX 中定义内联函数（性能优化）
+
+```javascript
+// ✅ 好的做法
+const handleClick = () => {
+  // 处理逻辑
+};
+
+return <button onClick={handleClick}>Click</button>;
+
+// ❌ 避免
+return <button onClick={() => {}}>Click</button>;
+```
+
+## Next.js 特定规范
+
+### 客户端组件
+
+- 需要交互性的组件添加 `'use client'` 指令
+- 使用浏览器 API 的组件必须是客户端组件
+
+### 图片优化
+
+- 优先使用 Next.js `<Image>` 组件
+- 为 SEO 提供有意义的 `alt` 属性
+
+### 路由
+
+- 使用 `next/link` 的 `<Link>` 组件
+- 使用 `next/navigation` 的 `useRouter`, `usePathname` 等 hooks
+
+## GSAP 动画规范
+
+- 在 `useEffect` 中初始化 GSAP 动画
+- 记得清理动画以防止内存泄漏
+- 使用 ScrollTrigger 时注意刷新
+
+```javascript
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.from(".element", { opacity: 0, duration: 1 });
+  });
+
+  return () => ctx.revert(); // 清理
+}, []);
+```
+
+## 性能优化
+
+- 使用 `React.memo` 包裹纯组件
+- 使用 `useMemo` 和 `useCallback` 优化重渲染
+- 懒加载非关键组件
+- 图片使用 WebP 格式并提供回退
+
+## 注释规范
+
+- 复杂逻辑添加解释性注释
+- 组件顶部添加功能说明（如有必要）
+- 使用中文注释

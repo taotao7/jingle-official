@@ -1,0 +1,85 @@
+---
+alwaysApply: true
+---
+
+# Plax 项目结构规则
+
+## 项目概述
+
+这是一个基于 Next.js 14.2 的金融/Fintech 模板项目，使用 App Router 架构。
+
+## 核心技术栈
+
+- **框架**: Next.js 14.2.2 with App Router
+- **包管理器**: pnpm (必须使用 pnpm 而不是 npm 或 yarn)
+- **UI 库**: React 18
+- **动画库**: GSAP 3.12.5
+- **轮播组件**: Swiper 11.1.1
+- **视频播放**: react-player 2.16.0
+
+## 目录结构
+
+### `/app` - Next.js App Router 页面
+
+- [page.js](mdc:app/page.js) - 主页
+- [layout.js](mdc:app/layout.js) - 根布局，包含全局样式和字体配置
+- [globals.css](mdc:app/globals.css) - 全局样式
+- 各子目录对应不同页面路由（home-2, home-3, about, blog, career, contact 等）
+
+### `/components` - 可复用的 React 组件
+
+- [Banner.js](mdc:components/Banner.js) - Banner 组件，包含默认导出和命名导出
+- [CallToAction.js](mdc:components/CallToAction.js) - CTA 组件
+- [EmbedPopup.js](mdc:components/EmbedPopup.js) - 弹窗组件
+- [PlaxAccordion.js](mdc:components/PlaxAccordion.js) - 手风琴组件
+- [Pricing.js](mdc:components/Pricing.js) - 价格表组件
+- [Testimonials.js](mdc:components/Testimonials.js) - 评价组件
+
+### `/layouts` - 布局组件
+
+- [Header.js](mdc:layouts/Header.js) - 页面头部
+- [Footer.js](mdc:layouts/Footer.js) - 页面尾部
+- [PlaxLayout.js](mdc:layouts/PlaxLayout.js) - 主要布局包装器
+- [Preloader.js](mdc:layouts/Preloader.js) - 预加载器
+- [ScrollProgress.js](mdc:layouts/ScrollProgress.js) - 滚动进度条
+
+### `/utility` - 工具函数和自定义 Hooks
+
+- [index.js](mdc:utility/index.js) - 通用工具函数
+- [sliderProps.js](mdc:utility/sliderProps.js) - Swiper 配置属性
+- [useClickOutside.js](mdc:utility/useClickOutside.js) - 点击外部检测 Hook
+
+### `/lib` - 第三方库配置
+
+- `/plugins` - 插件初始化和配置
+
+### `/public` - 静态资源
+
+- `/css` - 样式文件
+- `/fonts` - 字体文件
+- `/img` - 图片资源
+- `/gsap-plugins` - GSAP 插件
+
+## 路径别名配置
+
+项目使用以下路径别名（在 [jsconfig.json](mdc:jsconfig.json) 中定义）：
+
+- `@/` - 项目根目录
+- `@css/` - public/css/
+- `@fonts/` - public/fonts/
+
+## 开发命令
+
+```bash
+pnpm dev       # 启动开发服务器
+pnpm build     # 构建生产版本
+pnpm start     # 启动生产服务器
+pnpm lint      # 运行 ESLint
+```
+
+## 重要约定
+
+1. 所有组件文件使用 `.js` 扩展名（不是 `.jsx`）
+2. 组件使用函数式组件和 ES6 导出
+3. 图片等静态资源放在 `/public` 目录下
+4. 页面路由通过 `/app` 目录结构定义

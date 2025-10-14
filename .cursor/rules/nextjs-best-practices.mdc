@@ -1,0 +1,295 @@
+---
+description: Next.js 14 App Router best practices and patterns
+globs: app/**/*.js,components/**/*.js,layouts/**/*.js
+---
+
+# Next.js 14 App Router 最佳实践
+
+## 服务器组件 vs 客户端组件
+
+### 默认使用服务器组件
+
+- App Router 中的组件默认是服务器组件
+- 服务器组件更快，SEO 更友好
+- 可以直接访问后端资源
+
+### 何时使用客户端组件 (`'use client'`)
+
+1. 需要使用 React Hooks (`useState`, `useEffect` 等)
+2. 需要事件监听器 (`onClick`, `onChange` 等)
+3. 需要使用浏览器 API (`window`, `localStorage` 等)
+4. 需要使用第三方库（如 GSAP, Swiper）
+
+```javascript
+"use client";
+
+import { useState, useEffect } from "react";
+import gsap from "gsap";
+
+const InteractiveComponent = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    gsap.from(".element", { opacity: 0 });
+  }, []);
+
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+};
+```
+
+## 布局和页面结构
+
+### 根布局 (app/layout.js)
+
+- 定义 HTML 结构和全局资源
+- 导入全局样式
+- 配置字体和 metadata
+
+```javascript
+export const metadata = {
+  title: "Page Title",
+  description: "Page description",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+### 嵌套布局
+
+- 使用嵌套布局共享 UI 元素
+- 布局在路由切换时保持状态
+
+```
+app/
+├── layout.js          (根布局)
+├── page.js            (首页)
+└── dashboard/
+    ├── layout.js      (仪表板布局)
+    └── page.js        (仪表板页面)
+```
+
+## 路由和导航
+
+### 链接
+
+```javascript
+import Link from 'next/link';
+
+// 内部链接
+<Link href="/about">About</Link>
+
+// 动态路由
+<Link href={`/blog/${post.id}`}>Read More</Link>
+
+// 带查询参数
+<Link href={{ pathname: '/search', query: { q: 'keyword' } }}>Search</Link>
+```
+
+### 编程式导航
+
+```javascript
+"use client";
+import { useRouter } from "next/navigation";
+
+const Component = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/dashboard");
+    // router.back();
+    // router.forward();
+    // router.refresh();
+  };
+};
+```
+
+## 数据获取
+
+### 服务器组件中获取数据
+
+```javascript
+// 服务器组件可以是 async
+async function Page() {
+  const data = await fetch("https://api.example.com/data", {
+    cache: "no-store", // 动态数据
+    // cache: 'force-cache' // 静态数据（默认）
+  });
+
+  return <div>{/* 使用 data */}</div>;
+}
+```
+
+### 客户端组件中获取数据
+
+```javascript
+"use client";
+import { useState, useEffect } from "react";
+
+function ClientComponent() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+
+  return <div>{/* 使用 data */}</div>;
+}
+```
+
+## 图片优化
+
+### 使用 next/image
+
+```javascript
+import Image from 'next/image';
+
+// 静态导入
+import logo from '@/public/img/logo.png';
+<Image src={logo} alt="Logo" />
+
+// 远程图片
+<Image
+  src="/img/banner.png"
+  alt="Banner"
+  width={500}
+  height={300}
+  priority // 关键图片预加载
+/>
+```
+
+## 元数据和 SEO
+
+### 静态元数据
+
+```javascript
+export const metadata = {
+  title: "Page Title",
+  description: "Page description",
+  keywords: ["keyword1", "keyword2"],
+  openGraph: {
+    title: "OG Title",
+    description: "OG Description",
+    images: ["/og-image.jpg"],
+  },
+};
+```
+
+### 动态元数据
+
+```javascript
+export async function generateMetadata({ params }) {
+  const product = await fetchProduct(params.id);
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
+```
+
+## 性能优化
+
+### 代码拆分和懒加载
+
+```javascript
+import dynamic from "next/dynamic";
+
+// 懒加载组件
+const DynamicComponent = dynamic(() => import("@/components/Heavy"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // 禁用 SSR（如果组件使用浏览器 API）
+});
+```
+
+### 并行数据获取
+
+```javascript
+async function Page() {
+  // 并行获取
+  const [users, posts] = await Promise.all([fetchUsers(), fetchPosts()]);
+
+  return <div>{/* 使用数据 */}</div>;
+}
+```
+
+## GSAP 集成最佳实践
+
+### ScrollTrigger 使用
+
+```javascript
+"use client";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Component() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(ref.current, {
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+        opacity: 0,
+        y: 50,
+      });
+    }, ref);
+
+    return () => ctx.revert();
+  }, []);
+
+  return <div ref={ref}>Animated content</div>;
+}
+```
+
+## 错误处理
+
+### 错误边界 (error.js)
+
+```javascript
+"use client";
+
+export default function Error({ error, reset }) {
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={() => reset()}>Try again</button>
+    </div>
+  );
+}
+```
+
+### 加载状态 (loading.js)
+
+```javascript
+export default function Loading() {
+  return <div>Loading...</div>;
+}
+```
+
+### 404 页面 (not-found.js)
+
+```javascript
+export default function NotFound() {
+  return (
+    <div>
+      <h2>Not Found</h2>
+      <p>Could not find requested resource</p>
+    </div>
+  );
+}
+```

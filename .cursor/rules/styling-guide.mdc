@@ -1,0 +1,264 @@
+---
+globs: *.css,*.scss,app/**/*.js,components/**/*.js
+---
+
+# 样式开发指南
+
+## CSS 架构
+
+### 全局样式
+
+- [globals.css](mdc:app/globals.css) - 全局样式和重置
+- [style.css](mdc:public/css/style.css) - 主要样式文件（从 SCSS 编译）
+
+### SCSS 源文件
+
+位于 `/public/scss`:
+
+- [style.scss](mdc:public/scss/style.scss) - 主入口文件
+- [\_variables.scss](mdc:public/scss/_variables.scss) - 变量定义
+- [\_common.scss](mdc:public/scss/_common.scss) - 通用样式
+- [\_components.scss](mdc:public/scss/_components.scss) - 组件样式
+
+### 插件样式
+
+- `bootstrap-grid.css` - Bootstrap Grid 系统
+- `swiper.min.css` - Swiper 轮播样式
+- `magnific-popup.css` - 弹窗样式
+- Font Awesome 图标
+
+## CSS 类名规范
+
+### 命名约定
+
+使用 BEM (Block Element Modifier) 的简化版本，以 `mil-` 作为命名空间：
+
+```css
+/* Block */
+.mil-banner {
+}
+
+/* Element */
+.mil-banner-text {
+}
+.mil-banner-img {
+}
+
+/* Modifier */
+.mil-banner.mil-dark-2 {
+}
+.mil-btn.mil-md {
+}
+```
+
+### 常用前缀
+
+- `mil-` - 主命名空间
+- `mil-banner-` - Banner 相关
+- `mil-btn-` - 按钮相关
+- `mil-text-` - 文本相关
+- `mil-mb-` - margin-bottom
+- `mil-mt-` - margin-top
+- `mil-p-` - padding
+
+### 工具类
+
+```html
+<!-- 间距 -->
+<div class="mil-mb-20">margin-bottom: 20px</div>
+<div class="mil-mb-60">margin-bottom: 60px</div>
+
+<!-- 文本对齐 -->
+<div class="mil-text-center">居中对齐</div>
+
+<!-- 文本渐变 -->
+<span class="mil-text-gradient-2">渐变文本</span>
+<h1 class="mil-text-gradient-3">渐变标题</h1>
+
+<!-- 按钮样式 -->
+<button class="mil-btn mil-md">中等按钮</button>
+<button class="mil-btn mil-md mil-light">浅色按钮</button>
+<button class="mil-btn mil-md mil-add-arrow">带箭头按钮</button>
+```
+
+## 响应式设计
+
+### Bootstrap Grid 系统
+
+使用 Bootstrap 的 12 列网格系统：
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-xl-6">左侧列</div>
+    <div class="col-xl-6">右侧列</div>
+  </div>
+</div>
+```
+
+### 断点
+
+- `xs`: < 576px (超小屏幕)
+- `sm`: ≥ 576px (小屏幕)
+- `md`: ≥ 768px (中等屏幕)
+- `lg`: ≥ 992px (大屏幕)
+- `xl`: ≥ 1200px (超大屏幕)
+- `xxl`: ≥ 1400px (特大屏幕)
+
+### 响应式类
+
+```html
+<div class="col-12 col-md-6 col-xl-4">
+  <!-- 手机全宽，平板半宽，桌面三分之一宽 -->
+</div>
+```
+
+## 颜色系统
+
+### CSS 变量
+
+使用 CSS 自定义属性定义颜色：
+
+```css
+:root {
+  --primary-color: #...;
+  --secondary-color: #...;
+  --text-color: #...;
+  --background-color: #...;
+}
+```
+
+### 主题切换
+
+使用 `mil-dark-2` 等修饰符类实现暗色模式：
+
+```html
+<div class="mil-banner mil-dark-2">
+  <!-- 暗色主题内容 -->
+</div>
+```
+
+## 字体系统
+
+### 字体族
+
+- **Primary**: Switzer (自定义字体)
+- **Secondary**: Questrial (Google Font)
+- **Icons**: Font Awesome
+
+### 字体加载
+
+```javascript
+// 在 layout.js 中加载
+import { Questrial } from "next/font/google";
+import "@fonts/css/switzer.css";
+
+const secondary_font = Questrial({
+  weight: ["400"],
+  variable: "--font-secondary",
+  display: "swap",
+});
+```
+
+### 字体类
+
+```css
+.mil-display {
+  /* 大标题 */
+}
+.mil-text-m {
+  /* 中等文本 */
+}
+.mil-text-sm {
+  /* 小文本 */
+}
+```
+
+## 动画和过渡
+
+### GSAP 动画
+
+项目使用 GSAP 进行高级动画：
+
+- ScrollTrigger - 滚动触发动画
+- ScrollSmoother - 平滑滚动
+- SplitText - 文本动画
+
+### CSS 过渡
+
+```css
+.mil-btn {
+  transition: all 0.3s ease;
+}
+
+.mil-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+```
+
+### 淡入动画
+
+```html
+<div class="mil-dissolve">
+  <!-- 内容会淡入显示 -->
+</div>
+```
+
+## 组件样式模式
+
+### 按钮
+
+```html
+<!-- 基本按钮 -->
+<button class="mil-btn">Button</button>
+
+<!-- 带修饰符 -->
+<button class="mil-btn mil-md">中等按钮</button>
+<button class="mil-btn mil-md mil-light">浅色按钮</button>
+<button class="mil-btn mil-md mil-add-arrow">带箭头</button>
+<button class="mil-btn mil-md mil-add-play">播放按钮</button>
+```
+
+### 卡片
+
+```html
+<div class="mil-card">
+  <div class="mil-card-header">
+    <!-- 头部内容 -->
+  </div>
+  <div class="mil-card-body">
+    <!-- 主体内容 -->
+  </div>
+</div>
+```
+
+## 性能优化
+
+### CSS 优化
+
+1. 避免使用 `@import`，使用 `<link>` 标签
+2. 关键 CSS 内联到 `<head>` 中
+3. 非关键 CSS 异步加载
+4. 使用 CSS 变量减少重复
+5. 压缩和最小化 CSS 文件
+
+### 图标优化
+
+- 使用 SVG 图标（位于 `/public/img/home-*/icons/`）
+- Font Awesome 图标按需加载
+
+### 字体优化
+
+- 使用 `font-display: swap` 避免 FOIT
+- 预加载关键字体
+- 使用 woff2 格式
+
+## 最佳实践
+
+1. **保持一致性**: 遵循现有的命名和结构模式
+2. **模块化**: 将样式拆分为可复用的组件
+3. **避免深层嵌套**: CSS 选择器不超过 3 层
+4. **使用工具类**: 对于常见样式使用工具类
+5. **注释**: 为复杂的样式添加注释
+6. **测试**: 在不同设备和浏览器上测试样式
