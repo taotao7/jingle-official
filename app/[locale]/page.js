@@ -531,15 +531,24 @@ const page = () => {
           /* Call to action 调整 */
           :global(.mil-out-frame) {
             padding: 40px 20px !important;
+            width: 100% !important; /* 避免 calc(100% + 200px) 带来的移动端横向滚动 */
+            transform: none !important; /* 取消默认的 translateX(-100px) */
+            overflow: hidden !important;
+          }
+          :global(.mil-out-frame.mil-visible) {
+            overflow: visible !important; /* 对需要的地方保持可见 */
+          }
+          :global(.mil-p-160-0) {
+            padding: 80px 0 20px !important;
           }
           :global(.mil-illustration-absolute img) {
             border-radius: 20px !important;
           }
 
-          /* 居中对齐 */
+          /* 居中对齐（按钮保持原本宽度） */
           :global(.mil-adaptive-right) {
             margin: 0 auto !important;
-            display: block !important;
+            display: inline-block !important;
             text-align: center !important;
           }
 
