@@ -8,10 +8,10 @@ const Banner = ({
   style = { maxWidth: "135%", transform: "translateX(5%)" },
   dark = false,
 }) => {
-  const t = useTranslations();
+  const t = useTranslations("banner");
 
-  const resolvedTitle = title ?? t("banner.title");
-  const resolvedSubtitle = subTitle ?? t("banner.subtitle");
+  const resolvedTitle = title ?? t("title");
+  const resolvedSubtitle = subTitle ?? t("subtitle");
 
   return (
     <div className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
@@ -28,16 +28,17 @@ const Banner = ({
               <h1
                 className="mil-display mil-text-gradient-3 mil-mb-60"
                 style={{
-                  fontSize: "4rem",
+                  fontSize: "clamp(2rem, 5vw, 4rem)",
                   lineHeight: "1.2",
-                  width: "42vw",
+                  width: "100%",
+                  maxWidth: "42vw",
                 }}
               >
                 {resolvedTitle}
               </h1>
               <div className="mil-buttons-frame">
                 <Link href="contact" className="mil-btn mil-md mil-add-arrow">
-                  立即加入
+                  {t("joinNow")}
                 </Link>
               </div>
             </div>
@@ -52,6 +53,33 @@ const Banner = ({
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 1199px) {
+          .mil-banner-text h1 {
+            max-width: 100% !important;
+            font-size: clamp(1.75rem, 4vw, 3rem) !important;
+          }
+          .mil-banner-text h6 {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+          }
+        }
+        @media (max-width: 767px) {
+          .mil-banner-text {
+            text-align: center;
+            margin-bottom: 2rem;
+          }
+          .mil-banner-img {
+            text-align: center;
+          }
+          .mil-banner-img img {
+            max-width: 100% !important;
+            transform: translateX(0) !important;
+          }
+          .mil-buttons-frame {
+            justify-content: center;
+          }
+        }
+      `}</style>
     </div>
   );
 };

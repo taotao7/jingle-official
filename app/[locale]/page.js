@@ -198,7 +198,7 @@ const page = () => {
       </div>
       {/* icon boxes end */}
       {/* call to action */}
-      <div className="mil-cta mil-up">
+      <div className="mil-cta mil-up services-section">
         <div className="container">
           <div className="mil-out-frame mil-p-160-100">
             <div className="row align-items-end">
@@ -214,8 +214,8 @@ const page = () => {
                 </Link>
               </div>
             </div>
-            <div className="row">
-              <div className="col-xl-4 mil-mb-60">
+            <div className="row services-row">
+              <div className="col-xl-4 col-md-6 mil-mb-60">
                 <div className="mil-icon-box">
                   <img
                     src="img/home-1/icons/1.svg"
@@ -228,7 +228,7 @@ const page = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-xl-4 mil-mb-60">
+              <div className="col-xl-4 col-md-6 mil-mb-60">
                 <div className="mil-icon-box">
                   <img
                     src="img/home-1/icons/2.svg"
@@ -241,7 +241,7 @@ const page = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-xl-4 mil-mb-60">
+              <div className="col-xl-4 col-md-6 mil-mb-60">
                 <div className="mil-icon-box">
                   <img
                     src="img/home-1/icons/3.svg"
@@ -371,6 +371,221 @@ const page = () => {
         </div>
       </div>
       {/* features end */}
+      <style jsx>{`
+        @media (max-width: 1199px) {
+          .mil-banner-text h1 {
+            font-size: clamp(1.75rem, 4vw, 3rem) !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        }
+        @media (max-width: 767px) {
+          /* 全局间距调整 */
+          :global(.mil-p-160-160) {
+            padding: 80px 0 !important;
+          }
+          :global(.mil-p-160-130) {
+            padding: 80px 0 65px !important;
+          }
+          :global(.mil-p-160-80) {
+            padding: 80px 0 40px !important;
+          }
+          :global(.mil-p-0-80) {
+            padding: 0 0 40px !important;
+          }
+          :global(.mil-p-0-160) {
+            padding: 0 0 80px !important;
+          }
+          :global(.mil-p-160-100) {
+            padding: 80px 0 50px !important;
+          }
+
+          /* 服务模块特定样式 */
+          .services-section :global(.container) {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            max-width: 100% !important;
+          }
+          .services-section :global(.mil-out-frame) {
+            padding: 40px 0 !important;
+            margin: 0 !important;
+          }
+          .services-section :global(.mil-mb-80-adaptive-30) {
+            margin-bottom: 20px !important;
+            text-align: center;
+            padding: 0 10px;
+          }
+          .services-section :global(.mil-mb-80) {
+            margin-bottom: 30px !important;
+            text-align: center;
+          }
+          .services-section :global(.mil-btn) {
+            display: inline-block;
+            margin: 0 auto;
+          }
+          .services-section :global(.row.align-items-end) {
+            text-align: center;
+            margin: 0 !important;
+          }
+          .services-section :global(.services-row) {
+            margin: 20px 0 0 0 !important;
+          }
+          .services-section :global(.services-row) > div {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            margin-bottom: 20px;
+          }
+          .services-section :global(.mil-icon-box) {
+            padding: 30px 20px !important;
+            text-align: center;
+            background: transparent;
+            height: 100%;
+          }
+          .services-section :global(.mil-icon-box img) {
+            max-width: 60px !important;
+            height: auto;
+            margin: 0 auto 20px !important;
+            display: block;
+          }
+          .services-section :global(.mil-icon-box h5) {
+            font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
+            margin-bottom: 15px !important;
+            padding: 0 10px;
+            word-wrap: break-word;
+          }
+          .services-section :global(.mil-icon-box .mil-text-m) {
+            font-size: clamp(0.875rem, 2.5vw, 1rem) !important;
+            line-height: 1.7 !important;
+            padding: 0 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
+
+          /* 标题和文本调整 */
+          :global(.mil-text-center h3) {
+            font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+          }
+          :global(h2) {
+            font-size: clamp(1.5rem, 4vw, 2rem) !important;
+          }
+          :global(h5) {
+            font-size: clamp(1rem, 3vw, 1.25rem) !important;
+          }
+          :global(.mil-text-m) {
+            font-size: clamp(0.875rem, 2vw, 1rem) !important;
+          }
+          :global(.mil-text-s) {
+            font-size: 0.875rem !important;
+          }
+
+          /* 图片圆角调整 */
+          :global(img[style*="borderRadius"]) {
+            border-radius: 20px !important;
+          }
+
+          /* 间距调整 */
+          :global(.mil-mb-60) {
+            margin-bottom: 30px !important;
+          }
+          :global(.mil-mb-80) {
+            margin-bottom: 40px !important;
+          }
+          :global(.mil-mb-30) {
+            margin-bottom: 20px !important;
+          }
+          :global(.mil-mb-20) {
+            margin-bottom: 15px !important;
+          }
+
+          /* Icon boxes 调整 */
+          :global(.mil-icon-box) {
+            padding: 30px 20px !important;
+          }
+          :global(.mil-icon-box img) {
+            max-width: 48px !important;
+          }
+
+          /* 按钮调整 */
+          :global(.mil-btn) {
+            padding: 12px 30px !important;
+            font-size: 0.875rem !important;
+          }
+
+          /* 列表调整 */
+          :global(.mil-list-2) {
+            padding-left: 0 !important;
+          }
+
+          /* 图片容器调整 */
+          :global(.mil-image-frame img),
+          :global(.mil-banner-img img) {
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          /* 渐变文本调整 */
+          :global(.mil-text-gradient-2) {
+            font-size: 1.25rem !important;
+          }
+
+          /* Call to action 调整 */
+          :global(.mil-out-frame) {
+            padding: 40px 20px !important;
+          }
+          :global(.mil-illustration-absolute img) {
+            border-radius: 20px !important;
+          }
+
+          /* 居中对齐 */
+          :global(.mil-adaptive-right) {
+            margin: 0 auto !important;
+            display: block !important;
+            text-align: center !important;
+          }
+
+          /* 行反转调整 */
+          :global(.flex-sm-row-reverse) {
+            flex-direction: column-reverse !important;
+          }
+        }
+
+        /* 平板适配 */
+        @media (min-width: 768px) and (max-width: 1199px) {
+          :global(.mil-p-160-160) {
+            padding: 120px 0 !important;
+          }
+          :global(.mil-p-160-130) {
+            padding: 120px 0 100px !important;
+          }
+          :global(.mil-p-160-80) {
+            padding: 120px 0 60px !important;
+          }
+          :global(.mil-p-0-80) {
+            padding: 0 0 60px !important;
+          }
+          :global(.mil-p-0-160) {
+            padding: 0 0 120px !important;
+          }
+          :global(.mil-p-160-100) {
+            padding: 120px 0 80px !important;
+          }
+
+          :global(h2) {
+            font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+          }
+
+          /* 服务模块平板优化 */
+          .services-section :global(.mil-out-frame) {
+            padding: 60px 30px !important;
+          }
+          .services-section :global(.mil-icon-box) {
+            padding: 35px 25px !important;
+          }
+          .services-section :global(.mil-icon-box img) {
+            max-width: 70px !important;
+          }
+        }
+      `}</style>
     </PlaxLayout>
   );
 };
