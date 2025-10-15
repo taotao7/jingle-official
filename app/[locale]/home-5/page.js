@@ -26,7 +26,7 @@ const page = () => {
                 </h1>
                 <div className="mil-buttons-frame">
                   <Link
-                    href="register"
+                    href="contact"
                     className="mil-btn mil-md mil-add-arrow"
                   >
                     Check balances
@@ -69,7 +69,7 @@ const page = () => {
                   your fingertips.
                 </p>
                 <div className="mil-up">
-                  <Link href="register" className="mil-btn mil-m mil-add-arrow">
+                  <Link href="contact" className="mil-btn mil-m mil-add-arrow">
                     Watch tutorial
                   </Link>
                 </div>

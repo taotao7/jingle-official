@@ -88,7 +88,7 @@ const page = () => {
                     </span>
                     <span className="mil-pale">m</span>
                   </p>
-                  <h5>Registered Users</h5>
+                  <h5>Satisfied Users</h5>
                 </div>
                 <div className="col-xl-6 mil-sm-text-center mil-mb-80 mil-up">
                   <p className="h1 mil-display mil-mb-15">
@@ -288,10 +288,10 @@ const page = () => {
                 </p>
                 <div className="mil-up">
                   <Link
-                    href="register"
+                    href="contact"
                     className="mil-btn mil-md mil-add-arrow"
                   >
-                    Register now
+                    Get started
                   </Link>
                 </div>
               </div>

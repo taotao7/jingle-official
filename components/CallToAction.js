@@ -17,10 +17,10 @@ export const CallToAction1 = () => {
               </p>
               <div className="mil-up mil-mb-60">
                 <Link
-                  href="/register"
+                  href="/contact"
                   className="mil-btn mil-button-transform mil-md mil-add-arrow"
                 >
-                  Protect My Purchases
+                  Talk to our team
                 </Link>
               </div>
             </div>

@@ -29,10 +29,10 @@ const page = () => {
                 </h1>
                 <div className="mil-buttons-frame">
                   <Link
-                    href="register"
+                    href="contact"
                     className="mil-btn mil-md mil-add-arrow"
                   >
-                    Try demo
+                    Talk to us
                   </Link>
                   <a
                     href="https://www.youtube.com/watch?v=gRhoYxy9Oss"
@@ -147,7 +147,7 @@ const page = () => {
                 the necessary tools to achieve successful
               </p>
               <div className="mil-up">
-                <Link href="register" className="mil-btn mil-m mil-add-arrow">
+                <Link href="contact" className="mil-btn mil-m mil-add-arrow">
                   Learn More
                 </Link>
               </div>
@@ -194,7 +194,7 @@ const page = () => {
                 </li>
               </ul>
               <div className="mil-up">
-                <Link href="register" className="mil-btn mil-m mil-add-arrow">
+                <Link href="contact" className="mil-btn mil-m mil-add-arrow">
                   Learn More
                 </Link>
               </div>
@@ -511,7 +511,8 @@ const page = () => {
                 </p>
                 <div className="mil-up mil-mb-80">
                   <Link
-                    href="register"
+                    href="contact"
+                    href="contact"
                     className="mil-btn mil-md mil-add-arrow"
                   >
                     Try demo

@@ -69,10 +69,10 @@ const page = () => {
                 </p>
                 <div className="mil-up">
                   <Link
-                    href="register"
+                    href="contact"
                     className="mil-btn mil-md mil-add-arrow"
                   >
-                    Register now
+                    Join us
                   </Link>
                 </div>
               </div>
@@ -203,9 +203,9 @@ const page = () => {
             </div>
           </div>
           <div className="mil-text-center mil-up">
-            <a href="#" className="mil-btn mil-m mil-add-arrow">
-              Loads more jobs
-            </a>
+            <Link href="contact" className="mil-btn mil-m mil-add-arrow">
+              Connect with talent team
+            </Link>
           </div>
         </div>
       </div>

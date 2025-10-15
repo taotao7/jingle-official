@@ -173,7 +173,7 @@ const page = () => {
               </div>
               <div className="col-xl-4 mil-mb-80 mil-up">
                 <Link
-                  href="register"
+                  href="contact"
                   className="mil-btn mil-m mil-add-arrow mil-adaptive-right"
                 >
                   Learn More
