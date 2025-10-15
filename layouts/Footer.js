@@ -1,4 +1,7 @@
+"use client";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 const Footer = ({ bg = true, margin = 160, footer }) => {
   switch (footer) {
     case 1:
@@ -15,84 +18,86 @@ const Footer = ({ bg = true, margin = 160, footer }) => {
 export default Footer;
 
 const Footer1 = ({ bg = true, margin = 160 }) => {
+  const t = useTranslations();
+
   return (
     <footer className={`${bg ? "mil-footer-with-bg" : ""} mil-p-${margin}-0 `}>
       <div className="container">
-        <div className="row">
-          <div className="col-xl-3">
-            <a href="#." className="mil-footer-logo mil-mb-60">
-              <img src="img/logo-2.png" alt="Plax" width={28} height={32} />
+        <div className="row justify-content-between mil-mb-90">
+          <div className="col-xl-3 col-lg-4 col-md-6 mil-mb-60">
+            <a href="#." className="mil-footer-logo mil-mb-30">
+              <img src="img/logo.png" alt="Plax" width={40} height={32} />
             </a>
-          </div>
-          <div className="col-xl-3 mil-mb-60">
-            <h6 className="mil-mb-60">Usefull Links</h6>
-            <ul className="mil-footer-list">
-              <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="about">About Us</Link>
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="contact">Contact Us</Link>
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="services">Services</Link>
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="price">Pricing</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-xl-3 mil-mb-60">
-            <h6 className="mil-mb-60">Help</h6>
-            <ul className="mil-footer-list">
-              <li className="mil-text-m mil-soft mil-mb-15">
-                999 Rue du Cherche-Midi, 7755500666 Paris, <br />
-                France
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                +001 (808) 555-0111
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-15">
-                support@plax.network
-              </li>
-            </ul>
-          </div>
-          <div className="col-xl-3 mil-mb-80">
-            <h6 className="mil-mb-60">Newsletter</h6>
-            <p className="mil-text-xs mil-soft mil-mb-15">
-              Subscribe to get the latest news form us
+            <h5 className="mil-mb-30">{t("footer.company")}</h5>
+            <p className="mil-text-m mil-soft mil-mb-30">
+              {t("banner.subtitle")}
             </p>
-            <form id="subscribeForm" className="mil-subscripe-form-footer">
-              <input className="mil-input" name="EMAIL" type="email" placeholder="Email" autoComplete="off" />
-              <button type="submit">
-                <i className="far fa-envelope-open mil-dark" />
-              </button>
-              <div className="mil-checkbox-frame mil-mt-15">
-                <div className="mil-checkbox">
-                  <input type="checkbox" id="checkbox" defaultChecked="" />
-                  <label htmlFor="checkbox" />
-                </div>
-                <p className="mil-text-xs mil-soft">
-                  Subscribe to get the latest news
-                </p>
-              </div>
-            </form>
+          </div>
+
+          <div className="col-xl-2 col-lg-2 col-md-6 mil-mb-60">
+            <h6 className="mil-mb-30">{t("nav.pages")}</h6>
+            <ul className="mil-footer-list">
+              <li className="mil-text-m mil-soft mil-mb-15">
+                <Link href="/">{t("common.home")}</Link>
+              </li>
+              <li className="mil-text-m mil-soft mil-mb-15">
+                <Link href="about">{t("common.about")}</Link>
+              </li>
+              <li className="mil-text-m mil-soft mil-mb-15">
+                <Link href="contact">{t("common.contact")}</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-xl-4 col-lg-3 col-md-6 mil-mb-60">
+            <h6 className="mil-mb-30">{t("footer.contact.address")}</h6>
+            <ul className="mil-footer-list">
+              <li className="mil-text-m mil-soft mil-mb-20">
+                <i
+                  className="fas fa-map-marker-alt"
+                  style={{ marginRight: "8px" }}
+                ></i>
+                {t("footer.contact.beijing")}
+              </li>
+              <li className="mil-text-m mil-soft mil-mb-20">
+                <i
+                  className="fas fa-map-marker-alt"
+                  style={{ marginRight: "8px" }}
+                ></i>
+                {t("footer.contact.chengdu")}
+              </li>
+              <li className="mil-text-m mil-soft mil-mb-20">
+                <i
+                  className="fas fa-map-marker-alt"
+                  style={{ marginRight: "8px" }}
+                ></i>
+                {t("footer.contact.hongkong")}
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-xl-2 col-lg-3 col-md-6 mil-mb-60">
+            <h6 className="mil-mb-30">{t("footer.contact.phone")}</h6>
+            <p
+              className="mil-text-sm mil-soft mil-mb-20"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <i className="fas fa-phone" style={{ marginRight: "8px" }}></i>
+              {t("footer.contact.phoneNumber")}
+            </p>
           </div>
         </div>
+
         <div className="mil-footer-bottom">
           <div className="row">
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-soft">
-                © 2024 Plax Finance &amp; Fintech Design
+            <div className="col-xl-12">
+              <div className="mil-divider mil-mb-30"></div>
+              <p className="mil-text-s mil-soft mil-text-center mil-mb-15">
+                {t("footer.copyright")}
               </p>
-            </div>
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-text-right mil-sm-text-left mil-soft">
-                Developed by{" "}
-                <a href="https://bslthemes.com" target="blank">
-                  bslthemes
+              <p className="mil-text-xs mil-soft mil-text-center">
+                <a href="https://beian.miit.gov.cn/" target="_blank">
+                  {t("footer.icp")}
                 </a>
               </p>
             </div>
@@ -103,6 +108,8 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
   );
 };
 const Footer3 = ({ bg = true, margin = 160 }) => {
+  const t = useTranslations();
+
   return (
     <footer className="mil-footer-dark-2 mil-p-160-0">
       <div className="container">
@@ -113,75 +120,52 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
             </a>
           </div>
           <div className="col-xl-3 mil-mb-60">
-            <h6 className="mil-mb-60 mil-soft">Usefull Links</h6>
+            <h6 className="mil-mb-60 mil-soft">{t("footer.company")}</h6>
             <ul className="mil-footer-list">
               <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="about">About Us</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="contact">Contact Us</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="services">Services</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="price">Pricing</Link>
+                {t("footer.contact.address")}
+                <br />
+                {t("footer.contact.beijing")}
+                <br />
+                {t("footer.contact.chengdu")}
+                <br />
+                {t("footer.contact.hongkong")}
               </li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-60">
-            <h6 className="mil-mb-60 mil-soft">Help</h6>
+            <h6 className="mil-mb-60 mil-soft">{t("nav.pages")}</h6>
             <ul className="mil-footer-list">
               <li className="mil-text-m mil-pale mil-mb-15">
-                999 Rue du Cherche-Midi, 7755500666 Paris, <br />
-                France
+                <Link href="/">{t("common.home")}</Link>
               </li>
               <li className="mil-text-m mil-pale mil-mb-15">
-                +001 (808) 555-0111
+                <Link href="about">{t("common.about")}</Link>
               </li>
               <li className="mil-text-m mil-pale mil-mb-15">
-                support@plax.network
+                <Link href="contact">{t("common.contact")}</Link>
+              </li>
+              <li className="mil-text-m mil-pale mil-mb-15">
+                <Link href="services">{t("common.services")}</Link>
+              </li>
+              <li className="mil-text-m mil-pale mil-mb-15">
+                <Link href="price">{t("common.price")}</Link>
               </li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-80">
-            <h6 className="mil-mb-60 mil-soft">Newsletter</h6>
+            <h6 className="mil-mb-60 mil-soft">{t("footer.contact.phone")}</h6>
             <p className="mil-text-xs mil-pale mil-mb-15">
-              Subscribe to get the latest news form us
+              {t("footer.contact.phoneNumber")}
             </p>
-            <form className="mil-subscripe-form-footer">
-              <input className="mil-input" type="email" placeholder="Email" />
-              <button type="submit">
-                <i className="far fa-envelope-open mil-dark" />
-              </button>
-              <div className="mil-checkbox-frame mil-mt-15">
-                <div className="mil-checkbox">
-                  <input type="checkbox" id="checkbox" defaultChecked="" />
-                  <label htmlFor="checkbox" />
-                </div>
-                <p className="mil-text-xs mil-pale">
-                  Subscribe to get the latest news
-                </p>
-              </div>
-            </form>
           </div>
         </div>
         <div className="mil-footer-bottom">
           <div className="row">
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-pale">
-                © 2024 Plax Finance &amp; Fintech Design
-              </p>
-            </div>
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-text-right mil-sm-text-left mil-pale">
-                Developed by{" "}
-                <a href="https://bslthemes.com" target="blank">
-                  bslthemes
-                </a>
+            <div className="col-xl-12">
+              <p className="mil-text-s mil-pale mil-text-center">
+                {t("footer.copyright")} <br />
+                {t("footer.icp")}
               </p>
             </div>
           </div>
@@ -192,6 +176,8 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
 };
 
 const Footer2 = () => {
+  const t = useTranslations();
+
   return (
     <footer className="mil-footer-dark mil-p-160-0">
       <div className="container">
@@ -202,50 +188,45 @@ const Footer2 = () => {
             </a>
             <ul className="mil-footer-list mil-footer-list-2">
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="/">Home</Link>
+                <Link href="/">{t("common.home")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="about">About Us</Link>
+                <Link href="about">{t("common.about")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="contact">Contact Us</Link>
+                <Link href="contact">{t("common.contact")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="services">Services</Link>
+                <Link href="services">{t("common.services")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="price">Pricing</Link>
+                <Link href="price">{t("common.price")}</Link>
               </li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-60">
             <ul className="mil-footer-list">
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                999 Rue du Cherche-Midi, 7755500666 Paris, <br />
-                France
+                {t("footer.contact.address")}
+                <br />
+                {t("footer.contact.beijing")}
+                <br />
+                {t("footer.contact.chengdu")}
+                <br />
+                {t("footer.contact.hongkong")}
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                +001 (808) 555-0111
-              </li>
-              <li className="mil-text-m mil-dark-soft mil-mb-15">
-                support@plax.network
+                {t("footer.contact.phoneNumber")}
               </li>
             </ul>
           </div>
         </div>
         <div className="mil-footer-bottom">
           <div className="row">
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-dark-soft">
-                © 2024 Plax Finance &amp; Fintech Design
-              </p>
-            </div>
-            <div className="col-xl-6">
-              <p className="mil-text-s mil-text-right mil-sm-text-left mil-dark-soft">
-                Developed by{" "}
-                <a href="https://bslthemes.com" target="blank">
-                  bslthemes
-                </a>
+            <div className="col-xl-12">
+              <p className="mil-text-s mil-dark-soft mil-text-center">
+                {t("footer.copyright")} <br />
+                {t("footer.icp")}
               </p>
             </div>
           </div>

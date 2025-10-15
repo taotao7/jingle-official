@@ -23,6 +23,19 @@
   "banner": {
     "title": "Global Vision",
     "subtitle": "Making global services smarter and more reliable"
+  },
+  "footer": {
+    "company": "Jinguo Future",
+    "copyright": "©2025 Jinguo Future (Beijing) Technology Co., Ltd.",
+    "icp": "ICP: 京ICP备2023005316号-1",
+    "contact": {
+      "phone": "Contact:",
+      "phoneNumber": "Mr. Xie +86-13671124462",
+      "address": "Office Address:",
+      "beijing": "9th Floor, Building 2, No. 5 Dongshuijing Hutong, Dongcheng District, Beijing",
+      "chengdu": "2nd Floor, Crystal Cube New Economy Headquarters Base, Wuhou District, Chengdu",
+      "hongkong": "Unit 87, 35th Floor, Infinitus Plaza, 199 Des Voeux Road, Sheung Wan, Hong Kong."
+    }
   }
 }
 

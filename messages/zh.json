@@ -23,6 +23,19 @@
   "banner": {
     "title": "创新驱动、全球视野、责任担当、合作共赢",
     "subtitle": "科技赋能金融普惠，让全球服务更智能、更可靠"
+  },
+  "footer": {
+    "company": "金果未来",
+    "copyright": "©2025 金果未来（北京）科技有限公司",
+    "icp": "备案号：京ICP备2023005316号-1",
+    "contact": {
+      "phone": "联系电话：",
+      "phoneNumber": "谢先生  +86-13671124462 ",
+      "address": "办公地址：",
+      "beijing": "北京市东城区东水井胡同5号2号楼9层",
+      "chengdu": "成都武侯区晶立方·新经济总部基地2楼",
+      "hongkong": "Unit 87, 35th Floor, Infinitus Plaza,199 Des Voeux Road, Sheung Wan , Hong Kong."
+    }
   }
 }
 

@@ -13,10 +13,42 @@ const page = () => {
       {/* brands */}
       <div className="mil-brands mil-p-160-160">
         <div className="container">
-          <h5 className="mil-text-center mil-soft mil-mb-60 mil-up">
-            Join over 7,000 satisfied customers who enjoy our service!
-          </h5>
-          <div className="row justify-content-center">
+          <div className="mil-text-center mil-mb-60">
+            <h3
+              className="mil-up"
+              style={{
+                fontWeight: "400",
+                color: "#666",
+                letterSpacing: "0.5px",
+              }}
+            >
+              全球{" "}
+              <span
+                className="mil-text-gradient-2"
+                style={{
+                  fontSize: "1.5em",
+                  fontWeight: "600",
+                  margin: "0 5px",
+                }}
+              >
+                7
+              </span>{" "}
+              大战场
+              <span style={{ margin: "0 20px", opacity: "0.5" }}>·</span>
+              <span
+                className="mil-text-gradient-2"
+                style={{
+                  fontSize: "1.5em",
+                  fontWeight: "600",
+                  margin: "0 5px",
+                }}
+              >
+                3000+
+              </span>{" "}
+              位顶尖队友
+            </h3>
+          </div>
+          {/* <div className="row justify-content-center">
             <div className="col-3 col-md-2 mil-text-center">
               <div className="mil-brand">
                 <img src="img/brands/1.svg" alt="brand" className="mil-up" />
@@ -37,7 +69,7 @@ const page = () => {
                 <img src="img/brands/4.svg" alt="brand" className="mil-up" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* brands end */}

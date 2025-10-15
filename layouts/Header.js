@@ -40,7 +40,7 @@ const Header = ({ dark }) => {
               <Link href="services">{t("nav.services")}</Link>
             </li> */}
             <li>
-              <Link href="career">{t("nav.career")}</Link>
+              <Link href="contact">{t("nav.contact")}</Link>
             </li>
           </ul>
         </nav>
