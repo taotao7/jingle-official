@@ -22,12 +22,19 @@ const Banner = ({
               <h6 className="mil-text-gradient-2 mil-mb-20">
                 {resolvedSubtitle}
               </h6>
-              <h1 className="mil-display mil-text-gradient-3 mil-mb-60">
+              <h1
+                className="mil-display mil-text-gradient-3 mil-mb-60"
+                style={{
+                  fontSize: "4rem",
+                  lineHeight: "1.2",
+                  width: "42vw",
+                }}
+              >
                 {resolvedTitle}
               </h1>
               <div className="mil-buttons-frame">
                 <Link href="contact" className="mil-btn mil-md mil-add-arrow">
-                  Talk to us
+                  立即加入
                 </Link>
               </div>
             </div>
