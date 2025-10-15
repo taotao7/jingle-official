@@ -36,6 +36,24 @@
       "chengdu": "2nd Floor, Crystal Cube New Economy Headquarters Base, Wuhou District, Chengdu",
       "hongkong": "Unit 87, 35th Floor, Infinitus Plaza, 199 Des Voeux Road, Sheung Wan, Hong Kong."
     }
+  },
+  "about": {
+    "title": "What is Jinguo Future",
+    "titlePart1": "Jinguo Future",
+    "titlePart2": "What is",
+    "intro": "Jinguo Future (Beijing) Technology Co., Ltd. is a fintech company focused on overseas markets, committed to providing convenient, secure, and user-friendly inclusive financial services to users in developing countries worldwide through leading big data, cloud computing, and artificial intelligence technologies.",
+    "history": "Since its establishment in 2020, Jinguo Future has continuously expanded its global business and rapidly achieved leading positions in multiple markets:",
+    "milestones": {
+      "2021": "In 2021, entered Mexico and secured a top-three position in the industry;",
+      "2022": "In 2022, entered Colombia with APP business capturing half of the market; launched Peru project in the same year, ranking among the top five;",
+      "2023": "In 2023, officially launched in Pakistan and quickly rose to first place; entered Chile at the end of the year with continued growth;",
+      "2025": "In 2025, expanded business to Indonesia and entered the top five; launched in Kenya in September;",
+      "futureYear": "Future",
+      "future": "We will continue to expand to Thailand, Egypt, India, Ecuador and more countries and regions."
+    },
+    "compliance": "We highly value compliance and brand building, with comprehensive qualifications in Latin America and Southeast Asia, recognized as a compliance benchmark in the region.",
+    "team": "Jinguo Future has branches in Beijing, Chengdu, Hong Kong, and 8 overseas countries, with a team size of 3,000 people. We value talent and continuously create international development platforms and diverse promotion channels for employees, with outstanding talents having opportunities to work and exchange in Latin America, Southeast Asia and other regions.",
+    "closing": "We continue to expand our global business footprint at the rate of one new market per year. If you are eager to participate in technological innovation and embrace global opportunities, welcome to join Jinguo Future and grow with us to create the future together!"
   }
 }
 

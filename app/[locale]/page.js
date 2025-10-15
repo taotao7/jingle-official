@@ -4,7 +4,10 @@ import { CallToAction1 } from "@/components/CallToAction";
 import { Testimonials2 } from "@/components/Testimonials";
 import PlaxLayout from "@/layouts/PlaxLayout";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 const page = () => {
+  const t = useTranslations("about");
   return (
     <PlaxLayout>
       {/* banner */}
@@ -78,33 +81,22 @@ const page = () => {
         <div className="container">
           <div className="row flex-sm-row-reverse justify-content-between align-items-center">
             <div className="col-xl-6 mil-mb-80">
-              <h2 className="mil-mb-30 mil-up">Our essence, your experience</h2>
+              <h2 className="mil-mb-30 mil-up">{t("title")}</h2>
               <p className="mil-text-m mil-soft mil-mb-60 mil-up">
-                Visualize your financial progress with detailed reports and
-                graphs <br />
-                that give you visual insights into your spending and saving
-                habits.
+                {t("intro")}
               </p>
               <ul className="mil-list-2 mil-type-2">
                 <li>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">Plax® Global Service</h5>
-                    <p className="mil-text-m mil-soft">
-                      Experience exceptional service around the world. <br />
-                      With our Plax® Global Service, we provide assistance{" "}
-                      <br />
-                      and support, wherever you are, to ensure your peace.
-                    </p>
+                    <h5 className="mil-mb-15">全球业务布局</h5>
+                    <p className="mil-text-m mil-soft">{t("history")}</p>
                   </div>
                 </li>
                 <li>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">Personalized Rewards Program</h5>
+                    <h5 className="mil-mb-15">合规与人才</h5>
                     <p className="mil-text-m mil-soft">
-                      Enjoy a rewards program that fits your lifestyle. Earn{" "}
-                      <br />
-                      points with every purchase and access exclusive <br />
-                      rewards, from trips to high-quality products.
+                      {t("compliance")} {t("team")}
                     </p>
                   </div>
                 </li>
