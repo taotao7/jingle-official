@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 
 const page = () => {
   const t = useTranslations("about");
+  const tech = useTranslations("technology");
   return (
     <PlaxLayout>
       {/* banner */}
@@ -118,13 +119,14 @@ const page = () => {
             <div className="row align-items-end">
               <div className="mil-text-center">
                 <h2 className="mil-mb-30 mil-up">
-                  Protected coverage on your <br />
-                  purchases with Plax Standard
+                  {tech("titlePart1")}
+                  {tech("titlePart2")}
                 </h2>
+                <p className="mil-text-m mil-soft mil-mb-30 mil-up">
+                  {tech("subtitle")}
+                </p>
                 <p className="mil-text-m mil-soft mil-mb-60 mil-up">
-                  Enjoy instant coverage against theft or accidental damage{" "}
-                  <br />
-                  for the first forty-five (45) days from the date of purchase.
+                  {tech("description")}
                 </p>
               </div>
             </div>
@@ -146,10 +148,9 @@ const page = () => {
                   alt="icon"
                   className="mil-mb-30 mil-up"
                 />
-                <h5 className="mil-mb-20 mil-up">Make your Purchase</h5>
+                <h5 className="mil-mb-20 mil-up">{tech("impact.redefine")}</h5>
                 <p className="mil-text-s mil-soft mil-up">
-                  Enjoy instant coverage against theft or accidental damage for
-                  the first forty-five (45) days from the date of purchase.
+                  {tech("impact.description")}
                 </p>
               </div>
             </div>
@@ -160,10 +161,9 @@ const page = () => {
                   alt="icon"
                   className="mil-mb-30 mil-up"
                 />
-                <h5 className="mil-mb-20 mil-up">Manage your Rewards</h5>
+                <h5 className="mil-mb-20 mil-up">{tech("impact.growth")}</h5>
                 <p className="mil-text-s mil-soft mil-up">
-                  Rewards easily, Access a personalized rewards program that
-                  fits your lifestyle and preferences.
+                  {tech("impact.growthDesc")}
                 </p>
               </div>
             </div>
@@ -174,10 +174,9 @@ const page = () => {
                   alt="icon"
                   className="mil-mb-30 mil-up"
                 />
-                <h5 className="mil-mb-20 mil-up">Access Exclusive Benefits</h5>
+                <h5 className="mil-mb-20 mil-up">{tech("impact.partner")}</h5>
                 <p className="mil-text-s mil-soft mil-up">
-                  From special offers to added security, every transaction is
-                  not just a purchase, but an open door to a range.
+                  {tech("impact.partnerDesc")}
                 </p>
               </div>
             </div>
