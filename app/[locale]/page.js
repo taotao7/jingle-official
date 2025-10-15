@@ -9,6 +9,10 @@ import { useTranslations } from "next-intl";
 const page = () => {
   const t = useTranslations("about");
   const tech = useTranslations("technology");
+  const services = useTranslations("services");
+  const saas = useTranslations("saas");
+  const ads = useTranslations("ads");
+  const riskControl = useTranslations("riskControl");
   return (
     <PlaxLayout>
       {/* banner */}
@@ -190,16 +194,14 @@ const page = () => {
           <div className="mil-out-frame mil-p-160-100">
             <div className="row align-items-end">
               <div className="col-xl-8 mil-mb-80-adaptive-30">
-                <h2 className="mil-up">
-                  Innovation and Efficiency in Every Transaction
-                </h2>
+                <h2 className="mil-up">{services("title")}</h2>
               </div>
               <div className="col-xl-4 mil-mb-80 mil-up">
                 <Link
-                  href="contact"
+                  href="about"
                   className="mil-btn mil-m mil-add-arrow mil-adaptive-right"
                 >
-                  Learn More
+                  {services("learnMore")}
                 </Link>
               </div>
             </div>
@@ -211,10 +213,9 @@ const page = () => {
                     alt="icon"
                     className="mil-mb-30 mil-up"
                   />
-                  <h5 className="mil-mb-30 mil-up">Unmatched Speed</h5>
+                  <h5 className="mil-mb-30 mil-up">{saas("title")}</h5>
                   <p className="mil-text-m mil-soft mil-up">
-                    Make instant transfers and experience <br />
-                    Plax's unparalleled speed with every transaction.
+                    {saas("description")}
                   </p>
                 </div>
               </div>
@@ -225,11 +226,9 @@ const page = () => {
                     alt="icon"
                     className="mil-mb-30 mil-up"
                   />
-                  <h5 className="mil-mb-30 mil-up">Extensive Global Network</h5>
+                  <h5 className="mil-mb-30 mil-up">{ads("title")}</h5>
                   <p className="mil-text-m mil-soft mil-up">
-                    Connect with the world through our <br />
-                    global network that spans more than <br />
-                    170 countries.
+                    {ads("description")}
                   </p>
                 </div>
               </div>
@@ -240,11 +239,9 @@ const page = () => {
                     alt="icon"
                     className="mil-mb-30 mil-up"
                   />
-                  <h5 className="mil-mb-30 mil-up">Advanced Security</h5>
+                  <h5 className="mil-mb-30 mil-up">{riskControl("title")}</h5>
                   <p className="mil-text-m mil-soft mil-up">
-                    Protect your assets with our robust <br />
-                    security protocols and cutting-edge <br />
-                    technologies.
+                    {riskControl("description")}
                   </p>
                 </div>
               </div>

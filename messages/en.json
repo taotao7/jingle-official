@@ -72,6 +72,22 @@
       "partner": "Being a Reliable Partner",
       "partnerDesc": "Adhering to 'global vision, local precision'. Deeply rooted in Mexico, Jakarta, Islamabad... maintaining local compliance and building long-term trust in global markets."
     }
+  },
+  "services": {
+    "title": "Innovation and Efficiency in Every Transaction",
+    "learnMore": "Learn More"
+  },
+  "saas": {
+    "title": "Unmatched Speed",
+    "description": "Make instant transfers and experience Plax's unparalleled speed with every transaction."
+  },
+  "ads": {
+    "title": "Extensive Global Network",
+    "description": "Connect with the world through our global network that spans more than 170 countries."
+  },
+  "riskControl": {
+    "title": "Advanced Security",
+    "description": "Protect your assets with our robust security protocols and cutting-edge technologies."
   }
 }
 
