@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "price": "Pricing",
+    "price": "Price",
     "blog": "Blog",
     "contact": "Contact",
     "career": "Career",
@@ -14,26 +14,26 @@
     "pages": "Pages",
     "about": "About",
     "services": "Services",
-    "price": "Pricing",
+    "price": "Price",
     "contact": "Contact",
     "career": "Career",
     "publication": "Publication",
     "blog": "Blog"
   },
   "banner": {
-    "title": "Global Vision",
-    "subtitle": "Making global services smarter and more reliable"
+    "title": "Innovation-Driven, Global Vision, Responsibility, and Win-Win Cooperation",
+    "subtitle": "Technology empowers financial inclusion, making global services smarter and more reliable"
   },
   "footer": {
     "company": "Jinguo Future",
     "copyright": "©2025 Jinguo Future (Beijing) Technology Co., Ltd.",
-    "icp": "ICP: 京ICP备2023005316号-1",
+    "icp": "ICP License: Jing ICP Bei 2023005316-1",
     "contact": {
-      "phone": "Contact:",
+      "phone": "Phone:",
       "phoneNumber": "Mr. Xie +86-13671124462",
       "address": "Office Address:",
       "beijing": "9th Floor, Building 2, No. 5 Dongshuijing Hutong, Dongcheng District, Beijing",
-      "chengdu": "2nd Floor, Crystal Cube New Economy Headquarters Base, Wuhou District, Chengdu",
+      "chengdu": "2nd Floor, Jinglifang New Economy Headquarters Base, Wuhou District, Chengdu",
       "hongkong": "Unit 87, 35th Floor, Infinitus Plaza, 199 Des Voeux Road, Sheung Wan, Hong Kong."
     }
   },
@@ -41,53 +41,158 @@
     "title": "What is Jinguo Future",
     "titlePart1": "Jinguo Future",
     "titlePart2": "What is",
-    "intro": "Jinguo Future (Beijing) Technology Co., Ltd. is a fintech company focused on overseas markets, committed to providing convenient, secure, and user-friendly inclusive financial services to users in developing countries worldwide through leading big data, cloud computing, and artificial intelligence technologies.",
-    "history": "Since its establishment in 2020, Jinguo Future has continuously expanded its global business and rapidly achieved leading positions in multiple markets:",
+    "intro": "Jinguo Future (Beijing) Technology Co., Ltd. is a fintech company focused on overseas markets, dedicated to providing convenient, secure, and user-friendly inclusive financial services to users in developing countries worldwide through leading big data, cloud computing, and artificial intelligence technologies.",
+    "history": "Since its establishment in 2020, Jinguo Future has continuously expanded its global business, rapidly achieving a leading position in multiple markets:",
     "milestones": {
       "2021": "In 2021, entered Mexico and secured a top-three position in the industry;",
-      "2022": "In 2022, entered Colombia with APP business capturing half of the market; launched Peru project in the same year, ranking among the top five;",
-      "2023": "In 2023, officially launched in Pakistan and quickly rose to first place; entered Chile at the end of the year with continued growth;",
-      "2025": "In 2025, expanded business to Indonesia and entered the top five; launched in Kenya in September;",
+      "2022": "In 2022, entered Colombia, where our app business captured a significant market share; launched the Peru project in the same year, ranking in the top five;",
+      "2023": "In 2023, officially launched in the Pakistan market and quickly rose to first place; entered Chile at the end of the year, showing continuous growth;",
+      "2025": "In 2025, expanded business to Indonesia, entering the top five in the industry; in September of the same year, launched in the Kenyan market;",
       "futureYear": "Future",
-      "future": "We will continue to expand to Thailand, Egypt, India, Ecuador and more countries and regions."
+      "future": "We will also expand into more countries and regions such as Thailand, Egypt, India, and Ecuador."
     },
-    "compliance": "We highly value compliance and brand building, with comprehensive qualifications in Latin America and Southeast Asia, recognized as a compliance benchmark in the region.",
-    "team": "Jinguo Future has branches in Beijing, Chengdu, Hong Kong, and 8 overseas countries, with a team size of 3,000 people. We value talent and continuously create international development platforms and diverse promotion channels for employees, with outstanding talents having opportunities to work and exchange in Latin America, Southeast Asia and other regions.",
-    "closing": "We continue to expand our global business footprint at the rate of one new market per year. If you are eager to participate in technological innovation and embrace global opportunities, welcome to join Jinguo Future and grow with us to create the future together!"
+    "compliance": "We place great importance on compliance and brand building. With comprehensive qualifications in Latin America and Southeast Asia, we are recognized as a benchmark for compliance in the region.",
+    "team": "Jinguo Future has branches in Beijing, Chengdu, Hong Kong, and 8 overseas countries, with a team of 3,000 people. We value talent and continuously create an international development platform and diverse promotion channels for our employees. Outstanding talents have opportunities for exchange and work in Latin America, Southeast Asia, and other regions.",
+    "closing": "We continue to expand our global business footprint at a pace of one new market per year. If you are eager to participate in technological innovation and embrace global opportunities, welcome to join Jinguo Future to grow with us and create the future together!"
   },
   "technology": {
     "title": "Using AI to Bring Precise Change to the World",
-    "titlePart1": "Using AI to Bring",
-    "titlePart2": "Precise Change to the World",
-    "subtitle": "Smart Risk Control and Digital Solutions",
+    "titlePart1": "Using AI to Bring the World",
+    "titlePart2": "Precise Change",
+    "subtitle": "Smart Intelligent Risk Control and Digital Solutions",
     "description": "Our technology is quietly driving change:",
-    "intro1": "We are Jinguo Future, a global AI fintech company born in Beijing. Leveraging big data and AI technology, we provide smart risk control and digital solutions to emerging markets in Latin America, Southeast Asia, and Africa.",
-    "intro2": "Based in Beijing and Chengdu, with presence in 7 major capitals worldwide. We are both 'technology visionaries' and 'financial practitioners', continuously bringing intelligent and inclusive services to every corner of the world.",
-    "cta": "Join Jinguo Future >",
+    "intro1": "We are Jinguo Future, a global AI fintech company born in Beijing. Leveraging big data and AI technology, we provide smart intelligent risk control and digital solutions for emerging markets in Latin America, Southeast Asia, and Africa.",
+    "intro2": "Based in Beijing and Chengdu, with a presence in 7 major global capitals. We are both 'Tech Visionaries' and 'Financial Pragmatists,' continuously bringing smart, inclusive services to every corner of the world.",
+    "cta": "Jinguo Future, waiting for you to join >",
     "impact": {
       "redefine": "Redefining Possibilities",
-      "description": "Using algorithms to provide millions of users with their first trusted digital credit service, making 'unserviceable' a thing of the past.",
-      "growth": "Building Growth Engine",
-      "growthDesc": "Our intelligent systems have become the 'pioneering tool' for partners entering new global markets, doubling operational efficiency and risk control capabilities.",
+      "description": "Using algorithms, we have provided millions of users with their first-ever reliable digital credit service, making 'unserviceable' a thing of the past.",
+      "growth": "Building a Growth Engine",
+      "growthDesc": "Our intelligent system has become a powerful tool for partners entering new global markets, doubling operational efficiency and risk control capabilities.",
       "partner": "Being a Reliable Partner",
-      "partnerDesc": "Adhering to 'global vision, local precision'. Deeply rooted in Mexico, Jakarta, Islamabad... maintaining local compliance and building long-term trust in global markets."
+      "partnerDesc": "Adhering to a 'Global Vision, Local Precision.' We delve deep into Mexico, Jakarta, Islamabad... strictly adhering to local compliance to build long-term trust in global markets."
     }
   },
+  "homepage": {
+    "globalPresence": "Global",
+    "battlefields": "Major Markets",
+    "teammates": "Top Teammates",
+    "globalBusiness": "Global Business Layout",
+    "complianceAndTalent": "Compliance and Talent",
+    "saasTitle": "Global SaaS Platform, Opening a New Chapter in Efficient Operations",
+    "saasDescription": "The Jinguo Future Cloud Platform supports multiple languages and end-to-end business management, making your financial operations more controllable, efficient, and precise in the global market.",
+    "saasIntegration": "Intelligent Tool Integration",
+    "saasIntegrationDesc": "Integrates multi-dimensional tools like data analysis, smart outreach, and third-party risk control. Empowered by big data AI, it achieves integrated management of marketing, customer relations, and performance, effectively reducing risks and comprehensively improving operational efficiency.",
+    "adsTitle": "Precise Advertising, Connecting with Global Users",
+    "adsDescription": "Covering mainstream media resources worldwide, combined with third-party tracking and anti-fraud tools, we provide high-conversion, precisely targeted global advertising services for your product.",
+    "adsTargeting": "Multi-dimensional Smart Targeting",
+    "adsTargetingDesc": "Supports multi-dimensional targeting by country, device, browser, time, and interest to accurately filter audiences, effectively increasing ROI and making every penny of your budget count.",
+    "adsCreative": "End-to-End Creative Support",
+    "adsCreativeDesc": "From ad creative planning and material production to DSP channel delivery, we provide performance marketing solutions like CPI, CPA, and CPS to help products quickly reach the global market.",
+    "riskTitle": "Intelligent Risk Control, Safeguarding Business Security",
+    "riskDescription": "Integrates a multi-dimensional data risk control system to provide real-time risk assessment and warning services, helping enterprises effectively identify fraudulent behavior and build a secure and trustworthy business environment.",
+    "riskMonitoring": "Comprehensive Risk Monitoring",
+    "riskMonitoringDesc": "Combines multi-dimensional data such as device fingerprinting, behavioral analysis, and credit assessment to identify abnormal transactions and fraud risks in real-time, providing intelligent risk warnings and decision support.",
+    "riskDecision": "Data-Driven Decisions",
+    "riskDecisionDesc": "Integrates multi-source data like third-party credit bureaus and blacklists, continuously optimizing risk control strategies through machine learning models to provide a solid guarantee for business growth."
+  },
   "services": {
-    "title": "Innovation and Efficiency in Every Transaction",
+    "title": "Three Core Service Systems",
     "learnMore": "Learn More"
   },
   "saas": {
-    "title": "Unmatched Speed",
-    "description": "Make instant transfers and experience Plax's unparalleled speed with every transaction."
+    "title": "SaaS Platform Services",
+    "description": "The Jinguo SaaS Cloud Platform is a multi-language, end-to-end software system designed for risk control enterprises to conduct financial business. By integrating various intelligent tools, data, SMS outreach, voice calls, and third-party risk control, it makes business operations controllable, efficient, convenient, and precise. The system integrates marketing, customer, and employee performance management, and uses big data analysis to connect with AI, reducing customer risk and improving management levels.",
+    "components": {
+      "title": "SaaS Products",
+      "touch": "Smart Outreach",
+      "integrate": "Multi-dimensional Integration",
+      "market": "Marketing Management",
+      "ai": "Big Data AI"
+    },
+    "features": {
+      "innovation": {
+        "title": "Multi-language, End-to-End Business Support",
+        "description": "Provides a multi-language, end-to-end system to help risk control enterprises conduct financial business, achieving controllable and efficient operations."
+      },
+      "tool": {
+        "title": "Multi-dimensional Intelligent Tool Integration",
+        "description": "Integrates data, SMS, voice calls, and third-party risk control to promote convenient and precise business operations."
+      },
+      "management": {
+        "title": "Integrated Management of Marketing, Customers, and Performance",
+        "description": "Merges marketing, customer, and employee performance management, relying on big data to optimize operations."
+      },
+      "ai": {
+        "title": "Big Data AI Empowers Risk Control Enhancement",
+        "description": "Connects with AI through big data analysis to reduce customer risk and enhance enterprise management levels."
+      }
+    }
   },
   "ads": {
-    "title": "Extensive Global Network",
-    "description": "Connect with the world through our global network that spans more than 170 countries."
+    "title": "Media Channel Advertising Services",
+    "description": "We can place client ads in multiple countries and regions worldwide, covering major global app and website media resources. Combined with third-party tracking statistics and anti-fraud traffic tools, we help clients rapidly promote their products or services globally, providing high-conversion and precise media advertising services.",
+    "components": {
+      "title": "Advertising Agency Services",
+      "cpi": "CPI, CPA, CPS Performance Marketing",
+      "ad": "Ad Creative Planning",
+      "dsp": "DSP Channel Placement",
+      "material": "Creative Materials and Copywriting"
+    },
+    "features": {
+      "keyword": {
+        "title": "Keyword Targeting",
+        "description": "Place ads based on keywords; ads will only be displayed on media relevant to those keywords."
+      },
+      "country": {
+        "title": "Country Targeting",
+        "description": "Target specific countries and regions to precisely filter the audience, thereby increasing return on investment."
+      },
+      "device": {
+        "title": "Device Targeting",
+        "description": "Deliver ads to various devices, including Android, iOS, PC, and Smart TVs."
+      },
+      "browser": {
+        "title": "Browser Targeting",
+        "description": "Create specific visitor and exclusion lists to push ads to particular users."
+      },
+      "time": {
+        "title": "Time Targeting",
+        "description": "Select specific delivery periods, either certain times of the day or specific days of the week."
+      },
+      "fun": {
+        "title": "Interest Targeting",
+        "description": "Show ads only to users who are interested in the product or service."
+      }
+    }
   },
   "riskControl": {
-    "title": "Advanced Security",
-    "description": "Protect your assets with our robust security protocols and cutting-edge technologies."
+    "title": "Intelligent Risk Control Data Services",
+    "description": "Based on our mastery of risk control business and research into big data technology, we have developed a comprehensive intelligent risk control data service system. This system, designed to expand into anti-fraud and anti-money laundering scenarios, includes a lightweight and scalable built-in risk control model that effectively meets risk control needs under various business growth conditions. Data services include the integration of internal and external data, processing of risk indicators, risk control strategy services, and risk monitoring. On the tool level, it supports the integration of commercial tools and the development of proprietary tools.",
+    "components": {
+      "title": "Product Composition",
+      "model": "Risk Control Model",
+      "engine": "Decision Engine",
+      "market": "Risk Data Mart",
+      "warning": "Risk Warning"
+    },
+    "features": {
+      "innovation": {
+        "title": "Continuous Enrichment and Improvement of Innovative Solutions",
+        "description": "Continuously improve model scenarios and label libraries according to market developments to maintain the innovation and advancement of our data services."
+      },
+      "consulting": {
+        "title": "Integrated Consulting and Implementation Services",
+        "description": "With a professional consulting team, feasible implementation plans, and mature products, we provide professional, integrated consulting and implementation services."
+      },
+      "platform": {
+        "title": "Applicable to Various Basic Platforms",
+        "description": "Suitable for various basic platforms, such as traditional MPP platforms, Hadoop platforms, cloud platforms, etc."
+      },
+      "management": {
+        "title": "End-to-End Closed-Loop Risk Control Management Solution",
+        "description": "End-to-end risk control data services covering the entire lifecycle of the client's product."
+      }
+    }
   }
 }
-

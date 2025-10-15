@@ -73,6 +73,29 @@
       "partnerDesc": "坚持「全球视野、本地精准」。深入墨西哥、雅加达、伊斯兰堡……恪守本地合规，在全球市场建立长期信任。"
     }
   },
+  "homepage": {
+    "globalPresence": "全球",
+    "battlefields": "大战场",
+    "teammates": "位顶尖队友",
+    "globalBusiness": "全球业务布局",
+    "complianceAndTalent": "合规与人才",
+    "saasTitle": "全球化SAAS平台，开启高效运营新篇章",
+    "saasDescription": "金果未来云平台支持多语种、全流程业务管理，让您的金融业务在全球市场更可控、更高效、更精准。",
+    "saasIntegration": "智能化工具整合",
+    "saasIntegrationDesc": "整合数据分析、智能触达、三方风控等多维度工具，通过大数据AI赋能，实现营销、客管、绩效一体化管理，有效降低风险，全面提升运营效率。",
+    "adsTitle": "精准投放，连接全球用户",
+    "adsDescription": "覆盖全球主流媒体资源，配合第三方跟踪与防欺诈工具，为您的产品提供高转化、精准触达的全球广告投放服务。",
+    "adsTargeting": "多维度智能定向",
+    "adsTargetingDesc": "支持国家、设备、浏览器、时间、兴趣等多维度定向，精准过滤受众，有效提升投资回报率，让每一分预算都物有所值。",
+    "adsCreative": "全流程创意支持",
+    "adsCreativeDesc": "从广告创意策划、素材制作到DSP渠道投放，提供CPI、CPA、CPS等效果营销方案，助力产品快速推广至全球市场。",
+    "riskTitle": "智能风控，护航业务安全",
+    "riskDescription": "集成多维度数据风控体系，提供实时风险评估与预警服务，帮助企业有效识别欺诈行为，构建安全可信的业务环境。",
+    "riskMonitoring": "全方位风险监控",
+    "riskMonitoringDesc": "结合设备指纹、行为分析、信用评估等多维度数据，实时识别异常交易和欺诈风险，提供智能化的风险预警与决策支持。",
+    "riskDecision": "数据驱动决策",
+    "riskDecisionDesc": "整合第三方征信、黑名单库等多源数据，通过机器学习模型持续优化风控策略，为业务增长提供坚实保障。"
+  },
   "services": {
     "title": "三大核心服务体系",
     "learnMore": "了解更多"
