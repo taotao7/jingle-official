@@ -135,7 +135,15 @@ const page = () => {
               </div>
             </div>
             <div className="mil-illustration-absolute mil-up">
-              <img src="img/home-2/3.png" alt="illustration" />
+              <img
+                src="img/home-2/3.png"
+                alt="illustration"
+                style={{
+                  borderRadius: "50px",
+                  boxShadow: "0 18px 60px 0 rgba(44,70,144,0.09)",
+                  overflow: "hidden",
+                }}
+              />
             </div>
           </div>
         </div>
