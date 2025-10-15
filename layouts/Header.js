@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = ({ dark }) => {
   const currentPath = usePathname();
@@ -45,6 +46,7 @@ const Header = ({ dark }) => {
           </ul>
         </nav>
         <div className="mil-menu-buttons">
+          <LanguageSwitcher dark={dark} />
           <div
             className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
             onClick={() => setToggle(!toggle)}
