@@ -347,7 +347,7 @@ const page = () => {
       {/* features */}
       <div className="mil-features mil-p-0-160">
         <div className="container">
-          <div className="row flex-sm-row-reverse justify-content-between align-items-center">
+          <div className="row justify-content-between align-items-center">
             <div className="col-xl-6 mil-mb-80">
               <h2 className="mil-mb-30 mil-up">智能风控，护航业务安全</h2>
               <p className="mil-text-m mil-soft mil-mb-60 mil-up">
@@ -378,7 +378,7 @@ const page = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-xl-5 mil-mb-80">
+            <div className="col-xl-6 mil-mb-80">
               <img
                 src="img/home-2/6.png"
                 alt="image"
