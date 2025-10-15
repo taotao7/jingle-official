@@ -18,7 +18,10 @@ const Banner = ({
       <div className="container">
         <div className="row align-items-center">
           <div className="col-xl-6">
-            <div className="mil-banner-text">
+            <div
+              className="mil-banner-text"
+              style={{ position: "relative", zIndex: 10 }}
+            >
               <h6 className="mil-text-gradient-2 mil-mb-20">
                 {resolvedSubtitle}
               </h6>
@@ -40,7 +43,10 @@ const Banner = ({
             </div>
           </div>
           <div className="col-xl-6">
-            <div className="mil-banner-img">
+            <div
+              className="mil-banner-img"
+              style={{ position: "relative", zIndex: 1 }}
+            >
               <img src={img} alt="banner" style={style} />
             </div>
           </div>

@@ -264,40 +264,34 @@ const page = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col-xl-6 mil-mb-80">
               <h2 className="mil-mb-30 mil-up">
-                Plax Standard unusual activity detection
+                全球化SAAS平台，开启高效运营新篇章
               </h2>
               <p className="mil-text-m mil-soft mil-mb-60 mil-up">
-                Keep track of your financial activity and the response to alert.{" "}
+                金果未来云平台支持多语种、全流程业务管理，
                 <br />
-                Your security is our priority, are always one step forward.
+                让您的金融业务在全球市场更可控、更高效、更精准。
               </p>
               <ul className="mil-list-2 mil-type-2 mil-mb-60">
                 <li>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">Connected device management</h5>
+                    <h5 className="mil-mb-15">智能化工具整合</h5>
                     <p className="mil-text-m mil-soft">
-                      Plax monitors the devices connected to your <br />
-                      account. If we detect activity from a new device or <br />
-                      an unusual change, we will notify you.
+                      整合数据分析、智能触达、三方风控等多维度工具，
+                      <br />
+                      通过大数据AI赋能，实现营销、客管、绩效一体化管理，
+                      <br />
+                      有效降低风险，全面提升运营效率。
                     </p>
                   </div>
                 </li>
               </ul>
-              <div className="mil-up">
-                <Link
-                  href="/about"
-                  className="mil-btn mil-button-transform mil-m mil-add-arrow"
-                >
-                  More Information
-                </Link>
-              </div>
             </div>
             <div className="col-xl-6 mil-mb-80">
               <img
                 src="img/home-2/4.png"
                 alt="image"
                 className="mil-up"
-                style={{ width: "115%" }}
+                style={{ width: "100%", borderRadius: "50px" }}
               />
             </div>
           </div>
@@ -309,33 +303,30 @@ const page = () => {
         <div className="container">
           <div className="row flex-sm-row-reverse justify-content-between align-items-center">
             <div className="col-xl-6 mil-mb-80">
-              <h2 className="mil-mb-30 mil-up">
-                Instant Alerts &amp; Notifications with Plax
-              </h2>
+              <h2 className="mil-mb-30 mil-up">精准投放，连接全球用户</h2>
               <p className="mil-text-m mil-soft mil-mb-60 mil-up">
-                Visualize your financial progress with detailed reports and
-                graphs <br />
-                that give you visual insights into your spending and saving
-                habits.
+                覆盖全球主流媒体资源，配合第三方跟踪与防欺诈工具，
+                <br />
+                为您的产品提供高转化、精准触达的全球广告投放服务。
               </p>
               <ul className="mil-list-2 mil-type-2">
                 <li>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">Security in real time</h5>
+                    <h5 className="mil-mb-15">多维度智能定向</h5>
                     <p className="mil-text-m mil-soft">
-                      Notifications allow you to take immediate action in <br />
-                      case of unauthorized transactions or unusual activities.
+                      支持国家、设备、浏览器、时间、兴趣等多维度定向，
+                      <br />
+                      精准过滤受众，有效提升投资回报率，让每一分预算都物有所值。
                     </p>
                   </div>
                 </li>
                 <li>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">Notification History</h5>
+                    <h5 className="mil-mb-15">全流程创意支持</h5>
                     <p className="mil-text-m mil-soft">
-                      Keep track of your financial activity and the response to
-                      alert. <br />
-                      Your security is our priority, are always one step
-                      forward.
+                      从广告创意策划、素材制作到DSP渠道投放，
+                      <br />
+                      提供CPI、CPA、CPS等效果营销方案，助力产品快速推广至全球市场。
                     </p>
                   </div>
                 </li>
@@ -346,22 +337,59 @@ const page = () => {
                 src="img/home-2/5.png"
                 alt="image"
                 className="mil-up"
-                style={{ width: "100%" }}
+                style={{ width: "100%", borderRadius: "50px" }}
               />
             </div>
           </div>
         </div>
       </div>
       {/* features end */}
-      {/* testimonials */}
-      <div className="mil-testimonials mil-p-0-160">
+      {/* features */}
+      <div className="mil-features mil-p-0-160">
         <div className="container">
-          <Testimonials2 />
+          <div className="row flex-sm-row-reverse justify-content-between align-items-center">
+            <div className="col-xl-6 mil-mb-80">
+              <h2 className="mil-mb-30 mil-up">智能风控，护航业务安全</h2>
+              <p className="mil-text-m mil-soft mil-mb-60 mil-up">
+                集成多维度数据风控体系，提供实时风险评估与预警服务，
+                <br />
+                帮助企业有效识别欺诈行为，构建安全可信的业务环境。
+              </p>
+              <ul className="mil-list-2 mil-type-2 mil-mb-60">
+                <li>
+                  <div className="mil-up">
+                    <h5 className="mil-mb-15">全方位风险监控</h5>
+                    <p className="mil-text-m mil-soft">
+                      结合设备指纹、行为分析、信用评估等多维度数据，
+                      <br />
+                      实时识别异常交易和欺诈风险，提供智能化的风险预警与决策支持。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="mil-up">
+                    <h5 className="mil-mb-15">数据驱动决策</h5>
+                    <p className="mil-text-m mil-soft">
+                      整合第三方征信、黑名单库等多源数据，
+                      <br />
+                      通过机器学习模型持续优化风控策略，为业务增长提供坚实保障。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xl-5 mil-mb-80">
+              <img
+                src="img/home-2/6.png"
+                alt="image"
+                className="mil-up"
+                style={{ width: "100%", borderRadius: "50px" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
-      {/* testimonials end */}
-      {/* call to action */}
-      <CallToAction1 />
+      {/* features end */}
     </PlaxLayout>
   );
 };

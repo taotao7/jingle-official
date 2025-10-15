@@ -161,13 +161,13 @@ export const Testimonials2 = () => {
               />
             </svg>
             <p className="mil-text-m mil-mb-30 mil-up">
-              I had never felt so connected to my finances. The instant alerts
-              from Plax keep me informed in real time, giving me a feeling of
-              total control. But the result, the lion needs to drink members.
+              金果未来的SAAS平台帮助我们在拉美市场快速拓展业务。多语种支持和智能风控系统让我们的运营效率提升了3倍，客户风险显著降低。这是真正懂全球化业务的解决方案。
             </p>
             <div className="mil-customer">
               <img src="img/faces/1.jpg" alt="Customer" className="mil-up" />
-              <h6 className="mil-up">Rüdiger Karlsen</h6>
+              <h6 className="mil-up">
+                Carlos Rodriguez - 墨西哥金融科技公司 CEO
+              </h6>
             </div>
           </blockquote>
         </SwiperSlide>
@@ -191,13 +191,11 @@ export const Testimonials2 = () => {
               />
             </svg>
             <p className="mil-text-m mil-mb-30 mil-up">
-              Plax Standard has proven to be more than a card; it is my
-              financial defender. Proactive alerts give me confidence that my
-              security is in good hands.
+              与金果未来合作是我们进军东南亚市场最正确的决定。他们的广告投放服务不仅精准触达目标用户，ROI提升了200%，更重要的是他们对本地市场的深刻理解让我们少走了很多弯路。
             </p>
             <div className="mil-customer">
               <img src="img/faces/2.jpg" alt="Customer" className="mil-up" />
-              <h6 className="mil-up">Branka Berg</h6>
+              <h6 className="mil-up">Sarah Chen - 跨境电商平台运营总监</h6>
             </div>
           </blockquote>
         </SwiperSlide>
@@ -221,13 +219,11 @@ export const Testimonials2 = () => {
               />
             </svg>
             <p className="mil-text-m mil-mb-30 mil-up">
-              The detailed notification history in the App gives me a complete
-              view of my financial activity. It's like having a personal
-              security assistant always.
+              金果未来的智能风控数据服务帮助我们在巴基斯坦市场建立了完善的风险管理体系。从反欺诈到风险预警，全流程闭环管理让我们的坏账率降低了40%，业务增长却提速了一倍。
             </p>
             <div className="mil-customer">
               <img src="img/faces/3.jpg" alt="Customer" className="mil-up" />
-              <h6 className="mil-up">Karl Andreassen</h6>
+              <h6 className="mil-up">Ahmed Khan - 金融服务公司风控负责人</h6>
             </div>
           </blockquote>
         </SwiperSlide>
@@ -251,13 +247,11 @@ export const Testimonials2 = () => {
               />
             </svg>
             <p className="mil-text-m mil-mb-30 mil-up">
-              The detailed notification history in the App gives me a complete
-              view of my financial activity. It's like having a personal
-              security assistant always.
+              作为一家初创公司，我们很幸运能与金果未来合作。他们不仅提供技术支持，更像是业务合作伙伴，从合规咨询到落地实施，全程陪伴。现在我们已经在印尼市场站稳脚跟，期待下一站的合作。
             </p>
             <div className="mil-customer">
               <img src="img/faces/2.jpg" alt="Customer" className="mil-up" />
-              <h6 className="mil-up">Bett Nilsen</h6>
+              <h6 className="mil-up">Maria Santos - 互联网金融创业者</h6>
             </div>
           </blockquote>
         </SwiperSlide>
