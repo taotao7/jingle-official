@@ -1,3 +1,4 @@
+"use client";
 import { CallToAction2 } from "@/components/CallToAction";
 import PlaxLayout from "@/layouts/PlaxLayout";
 import Link from "next/link";
@@ -17,14 +18,14 @@ const Page = () => {
                   {t("aboutUs.section1.description")}
                 </div>
                 <h1 className="mil-mb-60">{t("aboutUs.section1.title")}</h1>
-                <ul className="mil-breadcrumbs mil-center">
+                {/* <ul className="mil-breadcrumbs mil-center">
                   <li>
                     <Link href="/">{t("common.home")}</Link>
                   </li>
                   <li>
                     <Link href="about">{t("common.about")}</Link>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>

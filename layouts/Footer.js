@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const Footer = ({ bg = true, margin = 160, footer }) => {
   switch (footer) {
@@ -19,15 +20,17 @@ export default Footer;
 
 const Footer1 = ({ bg = true, margin = 160 }) => {
   const t = useTranslations();
+  const params = useParams();
+  const locale = params?.locale || "zh";
 
   return (
     <footer className={`${bg ? "mil-footer-with-bg" : ""} mil-p-${margin}-0 `}>
       <div className="container">
         <div className="row justify-content-between mil-mb-90">
           <div className="col-xl-3 col-lg-4 col-md-6 mil-mb-60">
-            <a href="#." className="mil-footer-logo mil-mb-30">
-              <img src="img/logo.png" alt="Plax" width={40} height={32} />
-            </a>
+            <Link href={`/${locale}`} className="mil-footer-logo mil-mb-30">
+              <img src="/img/logo.png" alt="Plax" width={40} height={32} />
+            </Link>
             <h5 className="mil-mb-30">{t("footer.company")}</h5>
             <p className="mil-text-m mil-soft mil-mb-30">
               {t("banner.subtitle")}
@@ -38,13 +41,13 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
             <h6 className="mil-mb-30">{t("nav.pages")}</h6>
             <ul className="mil-footer-list">
               <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="/">{t("common.home")}</Link>
+                <Link href={`/${locale}`}>{t("common.home")}</Link>
               </li>
               <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="about">{t("common.about")}</Link>
+                <Link href={`/${locale}/about`}>{t("common.about")}</Link>
               </li>
               <li className="mil-text-m mil-soft mil-mb-15">
-                <Link href="contact">{t("common.contact")}</Link>
+                <Link href={`/${locale}/contact`}>{t("common.contact")}</Link>
               </li>
             </ul>
           </div>
@@ -109,15 +112,17 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
 };
 const Footer3 = ({ bg = true, margin = 160 }) => {
   const t = useTranslations();
+  const params = useParams();
+  const locale = params?.locale || "zh";
 
   return (
     <footer className="mil-footer-dark-2 mil-p-160-0">
       <div className="container">
         <div className="row">
           <div className="col-xl-3">
-            <a href="#." className="mil-footer-logo mil-mb-60">
-              <img src="img/logo-2.png" alt="Plax" width={28} height={32} />
-            </a>
+            <Link href={`/${locale}`} className="mil-footer-logo mil-mb-60">
+              <img src="/img/logo.png" alt="Plax" width={28} height={32} />
+            </Link>
           </div>
           <div className="col-xl-3 mil-mb-60">
             <h6 className="mil-mb-60 mil-soft">{t("footer.company")}</h6>
@@ -137,19 +142,13 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
             <h6 className="mil-mb-60 mil-soft">{t("nav.pages")}</h6>
             <ul className="mil-footer-list">
               <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="/">{t("common.home")}</Link>
+                <Link href={`/${locale}`}>{t("common.home")}</Link>
               </li>
               <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="about">{t("common.about")}</Link>
+                <Link href={`/${locale}/about`}>{t("common.about")}</Link>
               </li>
               <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="contact">{t("common.contact")}</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="services">{t("common.services")}</Link>
-              </li>
-              <li className="mil-text-m mil-pale mil-mb-15">
-                <Link href="price">{t("common.price")}</Link>
+                <Link href={`/${locale}/contact`}>{t("common.contact")}</Link>
               </li>
             </ul>
           </div>
@@ -177,30 +176,29 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
 
 const Footer2 = () => {
   const t = useTranslations();
+  const params = useParams();
+  const locale = params?.locale || "zh";
 
   return (
     <footer className="mil-footer-dark mil-p-160-0">
       <div className="container">
         <div className="row">
           <div className="col-xl-9 mil-mb-60 mil-footer-space-fix">
-            <a href="#." className="mil-footer-logo mil-logo-2 mil-mb-60">
-              <img src="img/logo-light.png" alt="Plax" width={83} height={32} />
-            </a>
+            <Link
+              href={`/${locale}`}
+              className="mil-footer-logo mil-logo-2 mil-mb-60"
+            >
+              <img src="/img/logo.png" alt="Plax" width={83} height={32} />
+            </Link>
             <ul className="mil-footer-list mil-footer-list-2">
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="/">{t("common.home")}</Link>
+                <Link href={`/${locale}`}>{t("common.home")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="about">{t("common.about")}</Link>
+                <Link href={`/${locale}/about`}>{t("common.about")}</Link>
               </li>
               <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="contact">{t("common.contact")}</Link>
-              </li>
-              <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="services">{t("common.services")}</Link>
-              </li>
-              <li className="mil-text-m mil-dark-soft mil-mb-15">
-                <Link href="price">{t("common.price")}</Link>
+                <Link href={`/${locale}/contact`}>{t("common.contact")}</Link>
               </li>
             </ul>
           </div>
