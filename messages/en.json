@@ -195,5 +195,30 @@
         "description": "End-to-end risk control data services covering the entire lifecycle of the client's product."
       }
     }
+  },
+  "aboutUs": {
+    "section1": {
+      "title": "Dare to Join Us and Redefine Global Fintech?",
+      "description": "Jingle Will - A rapidly expanding global 'Tech+Finance' powerhouse, recruiting the strongest teammates",
+      "joinUs": "Apply Now"
+    },
+    "section2": {
+      "title": "Breaking Traditional Boundaries, Building a Global Fintech Arena",
+      "description": "AI-powered risk control, waiting for you to join the team",
+      "content": "We're not a traditional financial company or an old-school tech factory. We are Jingle Will, the perfect combination of 'Tech Innovation' and 'Financial Execution'! We deconstruct finance with code, reshape risk control with AI, and dominate global markets. Now, we've built dual-engine headquarters in Beijing and Chengdu, and lit up the map at 7 global battlefields including Mexico City, Jakarta, and Islamabad.",
+      "contentFooter": "Over 3,000 top talents have assembled globally. Next step? We're waiting for you!"
+    },
+    "section3": {
+      "title": "This 'Instance' Experience is Maxed Out",
+      "description": "Team up to unlock global fintech challenges",
+      "part1Titel": "Global Mode from Day One",
+      "part1Description": "Your code, strategies, and products will be deployed directly on the frontlines of emerging markets like Mexico, Pakistan, and Kenya. You're not just working—you're providing millions of users with unprecedented financial services. That sense of achievement? Top-tier!",
+      "part2Titel": "Experience Points Going Crazy +1",
+      "part2Description": "Business doubles every year, new markets every year. This means your growth rate must keep up with our expansion speed! Here, there's no ceiling—only challenges and opportunities you can't imagine.",
+      "part3Titel": "Legendary Gear, Output Maxed",
+      "part3Description": "Worried about outdated tech? Not here! Big data, cloud computing, and AI models are our standard configuration. Here, you can freely leverage top resources and turn your wildest ideas into reality.",
+      "part4Titel": "Flat Culture, No Bureaucracy",
+      "part4Description": "We care about your ideas, not your title. Whether in Beijing, Chengdu, or Mexico offices, we advocate for direct, open, and collaborative atmosphere. Your voice matters."
+    }
   }
 }
