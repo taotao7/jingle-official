@@ -19,6 +19,58 @@ const Page = () => {
           display: block;
           width: 100%;
         }
+
+        /* 基础样式 */
+        .mil-portrait {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 24px;
+          background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 大尺寸 - 正方形 */
+        .mil-portrait.mil-large {
+          padding-bottom: 100%;
+        }
+
+        /* 中等尺寸 - 16:9 */
+        .mil-portrait.mil-medium {
+          padding-bottom: 56.25%;
+        }
+
+        /* 小尺寸 - 正方形 */
+        .mil-portrait.mil-square {
+          padding-bottom: 100%;
+        }
+
+        .mil-portrait img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 悬停效果 */
+        .mil-team-card:hover .mil-portrait {
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .mil-team-card:hover .mil-portrait img {
+          transform: scale(1.08);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 991px) {
+          .mil-portrait.mil-large {
+            padding-bottom: 75%;
+          }
+        }
       `}</style>
       <div className="mil-banner mil-banner-inner mil-dissolve">
         <div className="container">
@@ -89,8 +141,8 @@ const Page = () => {
           <div className="row">
             <div className="col-xl-4 mil-sm-text-center mil-mb-30 mil-up">
               <p className="h1 mil-display mil-mb-15">
-                <span className="mil-accent mil-counter" data-number={8}>
-                  8
+                <span className="mil-accent mil-counter" data-number={7}>
+                  7
                 </span>
                 <span className="mil-pale">+</span>
               </p>
@@ -104,15 +156,6 @@ const Page = () => {
                 <span className="mil-pale">+</span>
               </p>
               <h5>{t("homepage.teammates")}</h5>
-            </div>
-            <div className="col-xl-4 mil-sm-text-center mil-mb-30 mil-up">
-              <p className="h1 mil-display mil-mb-15">
-                <span className="mil-accent mil-counter" data-number={7}>
-                  7
-                </span>
-                <span className="mil-pale"></span>
-              </p>
-              <h5>{t("homepage.globalBusiness")}</h5>
             </div>
           </div>
         </div>
@@ -265,67 +308,90 @@ const Page = () => {
           <div className="row justify-content-center mil-text-center mil-mb-60">
             <div className="col-xl-8">
               <h2 className="mil-up mil-mb-30">{t("technology.cta")}</h2>
-              <p className="mil-text-m mil-soft mil-up">{t("about.team")}</p>
+              <p
+                className="mil-text-l mil-soft mil-up"
+                style={{ maxWidth: "calc(100% - 100px)", margin: "0 auto" }}
+              >
+                {t("about.team")}
+              </p>
             </div>
           </div>
 
-          {/* Featured team photo */}
-          <div className="row mil-mb-60">
-            <div className="col-xl-12">
-              <div className="mil-team-featured mil-up">
-                <img src="/img/about/team/0.jpg" alt="Team" />
-              </div>
-            </div>
-          </div>
-
-          {/* Team photo grid */}
+          {/* Team photo grid - 特色不规则布局 */}
           <div className="row">
-            <div className="col-xl-4 col-md-6 col-sm-6 mil-mb-30">
+            {/* 第一行 - 2大1小 - pic4和pic3在最前面 */}
+            <div className="col-lg-6 col-md-6 mil-mb-30">
               <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/1.png" alt="Team Member" />
+                <div className="mil-portrait mil-large">
+                  <img src="/img/about/team/pic4.png" alt="Team Member" />
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-md-6 col-sm-6 mil-mb-30">
-              <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/2.jpg" alt="Team Member" />
+            <div className="col-lg-6 col-md-6 mil-mb-30">
+              <div className="row">
+                <div className="col-12 mil-mb-30">
+                  <div className="mil-team-card mil-up">
+                    <div className="mil-portrait mil-medium">
+                      <img src="/img/about/team/pic3.png" alt="Team Member" />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div className="mil-team-card mil-up">
+                    <div className="mil-portrait mil-medium">
+                      <img src="/img/about/team/pic1.png" alt="Team Member" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-md-6 col-sm-6 mil-mb-30">
+
+            {/* 第二行 - 3个均等 */}
+            <div className="col-lg-4 col-md-6 mil-mb-30">
               <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/3.jpg" alt="Team Member" />
+                <div className="mil-portrait mil-square">
+                  <img src="/img/about/team/pic2.png" alt="Team Member" />
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-md-6 col-sm-6 mil-mb-30">
+            <div className="col-lg-4 col-md-6 mil-mb-30">
               <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/pic4.jpg" alt="Team Member" />
+                <div className="mil-portrait mil-square">
+                  <img src="/img/about/team/pic5.png" alt="Team Member" />
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-md-6 col-sm-6 mil-mb-30">
+            <div className="col-lg-4 col-md-6 mil-mb-30">
               <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/pic5.jpg" alt="Team Member" />
+                <div className="mil-portrait mil-square">
+                  <img src="/img/about/team/pic6.png" alt="Team Member" />
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-md-6 col-sm-6 mil-mb-30">
-              <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/pic6.JPG" alt="Team Member" />
+
+            {/* 第三行 - 1小2大 */}
+            <div className="col-lg-6 col-md-6 mil-mb-30">
+              <div className="row">
+                <div className="col-12 mil-mb-30">
+                  <div className="mil-team-card mil-up">
+                    <div className="mil-portrait mil-medium">
+                      <img src="/img/about/team/pic7.png" alt="Team Member" />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div className="mil-team-card mil-up">
+                    <div className="mil-portrait mil-medium">
+                      <img src="/img/about/team/pic8.png" alt="Team Member" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-md-6 col-sm-6 mil-mb-30">
+            <div className="col-lg-6 col-md-6 mil-mb-30">
               <div className="mil-team-card mil-up">
-                <div className="mil-portrait">
-                  <img src="/img/about/team/pic7.JPG" alt="Team Member" />
+                <div className="mil-portrait mil-large">
+                  <img src="/img/about/team/pic9.png" alt="Team Member" />
                 </div>
               </div>
             </div>
