@@ -9,6 +9,27 @@ const Page = () => {
 
   return (
     <PlaxLayout>
+      <style jsx>{`
+        .mil-team-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+        }
+        .mil-team-card img {
+          transition: transform 0.3s ease;
+        }
+        .mil-team-card:hover img {
+          transform: scale(1.05);
+        }
+        .mil-icon-box:hover {
+          transform: translateY(-5px) scale(1.02);
+        }
+        .mil-icon-frame {
+          transition: all 0.3s ease;
+        }
+        .mil-icon-box:hover .mil-icon-frame {
+          transform: rotate(5deg) scale(1.1);
+        }
+      `}</style>
       <div className="mil-banner mil-banner-inner mil-dissolve">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -107,84 +128,150 @@ const Page = () => {
         </div>
       </div>
       {/* facts end */}
-      {/* call to action */}
-      <div className="mil-cta mil-up">
+      {/* company culture */}
+      <div className="mil-features mil-p-0-80">
         <div className="container">
-          <div className="mil-out-frame mil-p-160-100">
-            <div className="row justify-content-center mil-text-center">
-              <div className="col-xl-8 mil-mb-80-adaptive-30">
-                <h2 className="mil-up">{t("aboutUs.section3.title")}</h2>
-                <p className="mil-text-m mil-soft mil-mt-30">
-                  {t("aboutUs.section3.description")}
-                </p>
-              </div>
+          <div className="row justify-content-center mil-text-center mil-mb-80">
+            <div className="col-xl-8">
+              <h2 className="mil-up mil-mb-30">{t("aboutUs.section3.title")}</h2>
+              <p className="mil-text-m mil-soft mil-up">
+                {t("aboutUs.section3.description")}
+              </p>
             </div>
-            <div className="row">
-              <div className="col-xl-6 mil-mb-60">
-                <div className="mil-icon-box">
+          </div>
+          <div className="row">
+            <div className="col-xl-6 mil-mb-60">
+              <div className="mil-icon-box" style={{
+                background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+                padding: "40px 30px",
+                borderRadius: "15px",
+                height: "100%",
+                transition: "all 0.3s ease"
+              }}>
+                <div className="mil-icon-frame mil-mb-30 mil-up" style={{
+                  width: "60px",
+                  height: "60px",
+                  background: "white",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.08)"
+                }}>
                   <img
                     src="/img/home-2/icons/1.svg"
                     alt="icon"
-                    className="mil-mb-30 mil-up"
+                    style={{ width: "32px" }}
                   />
-                  <h5 className="mil-mb-20 mil-up">
-                    {t("aboutUs.section3.part1Titel")}
-                  </h5>
-                  <p className="mil-text-m mil-soft mil-up">
-                    {t("aboutUs.section3.part1Description")}
-                  </p>
                 </div>
+                <h5 className="mil-mb-20 mil-up">
+                  {t("aboutUs.section3.part1Titel")}
+                </h5>
+                <p className="mil-text-m mil-soft mil-up">
+                  {t("aboutUs.section3.part1Description")}
+                </p>
               </div>
-              <div className="col-xl-6 mil-mb-60">
-                <div className="mil-icon-box">
+            </div>
+            <div className="col-xl-6 mil-mb-60">
+              <div className="mil-icon-box" style={{
+                background: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+                padding: "40px 30px",
+                borderRadius: "15px",
+                height: "100%",
+                transition: "all 0.3s ease"
+              }}>
+                <div className="mil-icon-frame mil-mb-30 mil-up" style={{
+                  width: "60px",
+                  height: "60px",
+                  background: "white",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.08)"
+                }}>
                   <img
                     src="/img/home-2/icons/2.svg"
                     alt="icon"
-                    className="mil-mb-30 mil-up"
+                    style={{ width: "32px" }}
                   />
-                  <h5 className="mil-mb-20 mil-up">
-                    {t("aboutUs.section3.part2Titel")}
-                  </h5>
-                  <p className="mil-text-m mil-soft mil-up">
-                    {t("aboutUs.section3.part2Description")}
-                  </p>
                 </div>
+                <h5 className="mil-mb-20 mil-up">
+                  {t("aboutUs.section3.part2Titel")}
+                </h5>
+                <p className="mil-text-m mil-soft mil-up">
+                  {t("aboutUs.section3.part2Description")}
+                </p>
               </div>
-              <div className="col-xl-6 mil-mb-60">
-                <div className="mil-icon-box">
+            </div>
+            <div className="col-xl-6 mil-mb-60">
+              <div className="mil-icon-box" style={{
+                background: "linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)",
+                padding: "40px 30px",
+                borderRadius: "15px",
+                height: "100%",
+                transition: "all 0.3s ease"
+              }}>
+                <div className="mil-icon-frame mil-mb-30 mil-up" style={{
+                  width: "60px",
+                  height: "60px",
+                  background: "white",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.08)"
+                }}>
                   <img
                     src="/img/home-2/icons/3.svg"
                     alt="icon"
-                    className="mil-mb-30 mil-up"
+                    style={{ width: "32px" }}
                   />
-                  <h5 className="mil-mb-20 mil-up">
-                    {t("aboutUs.section3.part3Titel")}
-                  </h5>
-                  <p className="mil-text-m mil-soft mil-up">
-                    {t("aboutUs.section3.part3Description")}
-                  </p>
                 </div>
+                <h5 className="mil-mb-20 mil-up">
+                  {t("aboutUs.section3.part3Titel")}
+                </h5>
+                <p className="mil-text-m mil-soft mil-up">
+                  {t("aboutUs.section3.part3Description")}
+                </p>
               </div>
-              <div className="col-xl-6 mil-mb-60">
-                <div className="mil-icon-box">
+            </div>
+            <div className="col-xl-6 mil-mb-60">
+              <div className="mil-icon-box" style={{
+                background: "linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)",
+                padding: "40px 30px",
+                borderRadius: "15px",
+                height: "100%",
+                transition: "all 0.3s ease"
+              }}>
+                <div className="mil-icon-frame mil-mb-30 mil-up" style={{
+                  width: "60px",
+                  height: "60px",
+                  background: "white",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.08)"
+                }}>
                   <img
                     src="/img/home-2/icons/4.svg"
                     alt="icon"
-                    className="mil-mb-30 mil-up"
+                    style={{ width: "32px" }}
                   />
-                  <h5 className="mil-mb-20 mil-up">
-                    {t("aboutUs.section3.part4Titel")}
-                  </h5>
-                  <p className="mil-text-m mil-soft mil-up">
-                    {t("aboutUs.section3.part4Description")}
-                  </p>
                 </div>
+                <h5 className="mil-mb-20 mil-up">
+                  {t("aboutUs.section3.part4Titel")}
+                </h5>
+                <p className="mil-text-m mil-soft mil-up">
+                  {t("aboutUs.section3.part4Description")}
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* call to action end */}
+      {/* company culture end */}
       {/* about company */}
       <div className="mil-features mil-p-160-80">
         <div className="container">
@@ -248,138 +335,141 @@ const Page = () => {
         </div>
       </div>
       {/* about company end */}
-      {/* team */}
-      <div className="mil-cta mil-up">
+      {/* team gallery */}
+      <div className="mil-team-gallery mil-p-160-130">
         <div className="container">
-          <div className="mil-out-frame mil-visible mil-image mil-p-160-130">
-            <div className="row justify-content-center mil-text-center">
-              <div className="col-xl-8 mil-mb-80-adaptive-30">
-                <h2 className="mil-light mil-up">{t("technology.cta")}</h2>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/1.png" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/2.jpg" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/3.jpg" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/pic4.jpg" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/pic5.jpg" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/pic6.JPG" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/pic7.JPG" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-6">
-                <div className="mil-team-card mil-mb-30 mil-up">
-                  <div className="mil-portrait mil-mb-30">
-                    <img src="/img/about/team/pic8.JPG" alt="Team Member" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* team end */}
-      {/* technology impact */}
-      <div className="mil-quote mil-p-160-130">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <h2 className="mil-mb-30">{t("technology.title")}</h2>
-              <p className="mil-text-m mil-soft mil-mb-60">
-                {t("technology.description")}
+          <div className="row justify-content-center mil-text-center mil-mb-60">
+            <div className="col-xl-8">
+              <h2 className="mil-up mil-mb-30">{t("technology.cta")}</h2>
+              <p className="mil-text-m mil-soft mil-up">
+                {t("about.team")}
               </p>
-              <div className="row">
-                <div className="col-xl-4">
-                  <ul className="mil-list-2 mil-type-2 mil-mb-30">
-                    <li>
-                      <div className="mil-up">
-                        <h5 className="mil-mb-15">
-                          {t("technology.impact.redefine")}
-                        </h5>
-                        <p className="mil-text-m mil-soft">
-                          {t("technology.impact.description")}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-xl-4">
-                  <ul className="mil-list-2 mil-type-2 mil-mb-30">
-                    <li>
-                      <div className="mil-up">
-                        <h5 className="mil-mb-15">
-                          {t("technology.impact.growth")}
-                        </h5>
-                        <p className="mil-text-m mil-soft">
-                          {t("technology.impact.growthDesc")}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-xl-4">
-                  <ul className="mil-list-2 mil-type-2 mil-mb-30">
-                    <li>
-                      <div className="mil-up">
-                        <h5 className="mil-mb-15">
-                          {t("technology.impact.partner")}
-                        </h5>
-                        <p className="mil-text-m mil-soft">
-                          {t("technology.impact.partnerDesc")}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+          </div>
+          
+          {/* Featured team photo */}
+          <div className="row mil-mb-60">
+            <div className="col-xl-12">
+              <div className="mil-team-featured mil-up" style={{
+                borderRadius: "20px",
+                overflow: "hidden",
+                boxShadow: "0 20px 80px rgba(0,0,0,0.1)",
+                position: "relative"
+              }}>
+                <img 
+                  src="/img/about/team/0.jpg" 
+                  alt="Team" 
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Team photo grid with overlap effect */}
+          <div className="row">
+            <div className="col-xl-4 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease",
+                position: "relative"
+              }}>
+                <img 
+                  src="/img/about/team/1.png" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-4 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/2.jpg" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-4 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/3.jpg" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/pic4.jpg" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/pic5.jpg" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/pic6.JPG" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-xl-3 col-md-6 mil-mb-30">
+              <div className="mil-team-card mil-up" style={{
+                borderRadius: "15px",
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                transition: "all 0.3s ease"
+              }}>
+                <img 
+                  src="/img/about/team/pic7.JPG" 
+                  alt="Team Member"
+                  style={{ width: "100%", display: "block" }}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* technology impact end */}
-      {/* call to action */}
-      <CallToAction2 />
-      {/* call to action end */}
+      {/* team gallery end */}
     </PlaxLayout>
   );
 };
