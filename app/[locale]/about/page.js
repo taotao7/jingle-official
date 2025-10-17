@@ -84,7 +84,7 @@ const Page = () => {
         .mil-timeline::before {
           content: "";
           position: absolute;
-          left: 120px;
+          left: 100px;
           top: 80px;
           bottom: 80px;
           width: 2px;
