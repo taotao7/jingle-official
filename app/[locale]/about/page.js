@@ -71,6 +71,189 @@ const Page = () => {
             padding-bottom: 75%;
           }
         }
+
+        /* 时间轴样式 */
+        .mil-timeline {
+          position: relative;
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 40px 0;
+        }
+
+        /* 垂直连接线 */
+        .mil-timeline::before {
+          content: "";
+          position: absolute;
+          left: 120px;
+          top: 80px;
+          bottom: 80px;
+          width: 2px;
+          background: linear-gradient(
+            180deg,
+            rgba(3, 166, 166, 0.1) 0%,
+            rgba(3, 166, 166, 0.6) 50%,
+            rgba(3, 166, 166, 0.1) 100%
+          );
+        }
+
+        .mil-timeline-item {
+          position: relative;
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 60px;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 0.6s ease;
+        }
+
+        .mil-timeline-item.mil-up {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* 年份标签 */
+        .mil-timeline-year {
+          flex-shrink: 0;
+          width: 100px;
+          font-size: 28px;
+          font-weight: 700;
+          text-align: right;
+          padding-right: 20px;
+          line-height: 1.4;
+          background: linear-gradient(135deg, #0d5152 0%, #03a6a6 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        /* 内容区域 */
+        .mil-timeline-content {
+          position: relative;
+          flex: 1;
+          padding-left: 60px;
+          padding-top: 5px;
+        }
+
+        /* 时间点 */
+        .mil-timeline-dot {
+          position: absolute;
+          left: -8px;
+          top: 8px;
+          width: 16px;
+          height: 16px;
+          background: #03a6a6;
+          border: 3px solid #ffffff;
+          border-radius: 50%;
+          box-shadow:
+            0 0 0 4px rgba(3, 166, 166, 0.2),
+            0 4px 12px rgba(3, 166, 166, 0.3);
+          z-index: 2;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* 未来节点特殊样式 */
+        .mil-timeline-dot-future {
+          background: linear-gradient(135deg, #f27457 0%, #a08488 100%);
+          box-shadow:
+            0 0 0 4px rgba(242, 116, 87, 0.2),
+            0 4px 20px rgba(242, 116, 87, 0.4),
+            0 0 40px rgba(242, 116, 87, 0.3);
+          animation: pulseFuture 2s ease-in-out infinite;
+        }
+
+        /* 脉冲动画 */
+        @keyframes pulse {
+          0%,
+          100% {
+            box-shadow:
+              0 0 0 4px rgba(3, 166, 166, 0.2),
+              0 4px 12px rgba(3, 166, 166, 0.3);
+          }
+          50% {
+            box-shadow:
+              0 0 0 8px rgba(3, 166, 166, 0.1),
+              0 4px 12px rgba(3, 166, 166, 0.4);
+          }
+        }
+
+        @keyframes pulseFuture {
+          0%,
+          100% {
+            box-shadow:
+              0 0 0 4px rgba(242, 116, 87, 0.2),
+              0 4px 20px rgba(242, 116, 87, 0.4),
+              0 0 40px rgba(242, 116, 87, 0.3);
+          }
+          50% {
+            box-shadow:
+              0 0 0 8px rgba(242, 116, 87, 0.1),
+              0 4px 20px rgba(242, 116, 87, 0.5),
+              0 0 60px rgba(242, 116, 87, 0.4);
+          }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+          .mil-timeline::before {
+            left: 75px;
+          }
+
+          .mil-timeline-year {
+            width: 75px;
+            font-size: 20px;
+            padding-right: 15px;
+          }
+
+          .mil-timeline-content {
+            padding-left: 45px;
+          }
+
+          .mil-timeline-dot {
+            left: -8px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mil-timeline::before {
+            left: 70px;
+          }
+
+          .mil-timeline-year {
+            width: 70px;
+            font-size: 18px;
+            padding-right: 12px;
+            white-space: nowrap;
+          }
+
+          .mil-timeline-content {
+            padding-left: 35px;
+          }
+
+          .mil-timeline-content p {
+            font-size: 14px;
+            line-height: 1.6;
+          }
+
+          .mil-timeline-item {
+            margin-bottom: 40px;
+          }
+        }
+
+        @media (max-width: 375px) {
+          .mil-timeline::before {
+            left: 65px;
+          }
+
+          .mil-timeline-year {
+            width: 65px;
+            font-size: 16px;
+            padding-right: 10px;
+          }
+
+          .mil-timeline-content {
+            padding-left: 32px;
+          }
+        }
       `}</style>
       <div className="mil-banner mil-banner-inner mil-dissolve">
         <div className="container">
@@ -250,48 +433,66 @@ const Page = () => {
               <p className="mil-text-m mil-soft mil-mb-30 mil-up">
                 {t("about.intro")}
               </p>
-              <p className="mil-text-m mil-soft mil-mb-20 mil-up">
+              <p className="mil-text-m mil-soft mil-mb-60 mil-up">
                 {t("about.history")}
               </p>
-              <ul className="mil-list-2 mil-type-2">
-                <li>
-                  <div className="mil-up">
+
+              {/* 时间轴 */}
+              <div className="mil-timeline">
+                <div className="mil-timeline-item mil-up">
+                  <div className="mil-timeline-year">2021</div>
+                  <div className="mil-timeline-content">
+                    <div className="mil-timeline-dot"></div>
                     <p className="mil-text-m mil-soft">
                       {t("about.milestones.2021")}
                     </p>
                   </div>
-                </li>
-                <li>
-                  <div className="mil-up">
+                </div>
+
+                <div className="mil-timeline-item mil-up">
+                  <div className="mil-timeline-year">2022</div>
+                  <div className="mil-timeline-content">
+                    <div className="mil-timeline-dot"></div>
                     <p className="mil-text-m mil-soft">
                       {t("about.milestones.2022")}
                     </p>
                   </div>
-                </li>
-                <li>
-                  <div className="mil-up">
+                </div>
+
+                <div className="mil-timeline-item mil-up">
+                  <div className="mil-timeline-year">2023</div>
+                  <div className="mil-timeline-content">
+                    <div className="mil-timeline-dot"></div>
                     <p className="mil-text-m mil-soft">
                       {t("about.milestones.2023")}
                     </p>
                   </div>
-                </li>
-                <li>
-                  <div className="mil-up">
+                </div>
+
+                <div className="mil-timeline-item mil-up">
+                  <div className="mil-timeline-year">2025</div>
+                  <div className="mil-timeline-content">
+                    <div className="mil-timeline-dot"></div>
                     <p className="mil-text-m mil-soft">
                       {t("about.milestones.2025")}
                     </p>
                   </div>
-                </li>
-                <li>
-                  <div className="mil-up">
+                </div>
+
+                <div className="mil-timeline-item mil-up">
+                  <div className="mil-timeline-year">
+                    {t("about.milestones.futureYear")}
+                  </div>
+                  <div className="mil-timeline-content">
+                    <div className="mil-timeline-dot mil-timeline-dot-future"></div>
                     <p className="mil-text-m mil-soft">
-                      <strong>{t("about.milestones.futureYear")}</strong>{" "}
                       {t("about.milestones.future")}
                     </p>
                   </div>
-                </li>
-              </ul>
-              <p className="mil-text-m mil-soft mil-mb-30 mil-up mil-mt-60">
+                </div>
+              </div>
+
+              <p className="mil-text-m mil-soft mil-mb-30 mil-up mil-mt-80">
                 {t("about.team")}
               </p>
               <p className="mil-text-m mil-soft mil-mb-30 mil-up">
@@ -307,7 +508,19 @@ const Page = () => {
         <div className="container">
           <div className="row justify-content-center mil-text-center mil-mb-60">
             <div className="col-xl-8">
-              <h2 className="mil-up mil-mb-30">{t("technology.cta")}</h2>
+              <h2
+                className="mil-up mil-mb-30"
+                style={{
+                  minWidth: "unset",
+                  margin: "0 auto",
+                  maxWidth: "100%",
+                  wordBreak: "break-word",
+                  fontSize: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                {t("technology.cta")}
+              </h2>
               <p
                 className="mil-text-l mil-soft mil-up"
                 style={{ maxWidth: "calc(100% - 100px)", margin: "0 auto" }}

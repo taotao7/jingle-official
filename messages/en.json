@@ -15,26 +15,26 @@
       "loginTitle": "Admin Login",
       "username": "Username",
       "password": "Password",
-      "unlock": "Unlock",
-      "formTitle": "Publish Job",
-      "listTitle": "Job Listings",
+      "unlock": "Enter Admin",
+      "formTitle": "Post a Job",
+      "listTitle": "Job List",
       "createNew": "Create New",
       "save": "Save Job",
       "saving": "Saving...",
       "loading": "Loading...",
-      "loadingError": "Failed to load data",
-      "slugExists": "Slug already exists. Please choose another.",
-      "saveError": "Failed to save job",
-      "deleteError": "Failed to delete job",
+      "loadingError": "Failed to load",
+      "saveError": "Failed to save",
+      "slugExists": "Slug already exists, please try another one.",
+      "deleteError": "Failed to delete",
       "delete": "Delete",
       "edit": "Edit",
       "published": "Published",
       "draft": "Draft",
-      "confirmDelete": "Are you sure you want to delete this job?",
-      "empty": "No jobs yet",
-      "invalidCredentials": "Incorrect username or password",
-      "loginFailed": "Unable to reach the login service. Please try again.",
-      "loggingIn": "Signing in...",
+      "confirmDelete": "Are you sure you want to delete this job posting?",
+      "empty": "No jobs available.",
+      "invalidCredentials": "Incorrect username or password.",
+      "loginFailed": "Login service is temporarily unavailable, please try again later.",
+      "loggingIn": "Logging in...",
       "fields": {
         "title": "Title",
         "slug": "Slug",
@@ -43,18 +43,18 @@
         "employment": "Employment Type",
         "priority": "Priority",
         "summary": "Summary",
-        "content": "Content"
+        "content": "Detailed Description"
       }
     }
   },
   "jobs": {
-    "sectionTitle": "Join Our Team",
-    "sectionSubtitle": "We are hiring talented teammates to build the future of global fintech.",
+    "sectionTitle": "Join Us",
+    "sectionSubtitle": "We are looking for outstanding partners to build the future of global fintech together.",
     "cta": "Apply Now",
-    "empty": "No open positions at the moment.",
+    "empty": "There are currently no open positions.",
     "location": "Location",
-    "employment": "Type",
-    "salary": "Salary",
+    "employment": "Employment Type",
+    "salary": "Salary Range",
     "published": "Published",
     "draft": "Draft"
   },
@@ -70,57 +70,57 @@
     "blog": "Blog"
   },
   "banner": {
-    "title": "Innovation-Driven, Global Vision, Responsibility, and Win-Win Cooperation",
-    "subtitle": "Technology empowers financial inclusion, making global services smarter and more reliable",
+    "title": "Innovation-driven, Global Vision, Responsibility, and Win-win Cooperation",
+    "subtitle": "Empowering financial inclusion with technology, making global services smarter and more reliable.",
     "joinNow": "Join Now"
   },
   "footer": {
-    "company": "Jingle Will",
-    "copyright": "©2025 Jingle Will (Beijing) Technology Co., Ltd.",
-    "icp": "ICP License: Jing ICP Bei 2023005316-1",
+    "company": "Jinguo Future",
+    "copyright": "©2025 Jinguo Future (Beijing) Technology Co., Ltd.",
+    "icp": "ICP Filing No.: Jing ICP Bei 2023005316-1",
     "contact": {
-      "phone": "Phone:",
+      "phone": "Contact Phone:",
       "phoneNumber": "Mr. Xie +86-13671124462",
       "address": "Office Address:",
       "beijing": "9th Floor, Building 2, No. 5 Dongshuijing Hutong, Dongcheng District, Beijing",
-      "chengdu": "2nd Floor, Jinglifang New Economy Headquarters Base, Wuhou District, Chengdu",
+      "chengdu": "2nd Floor, Jinglifang·New Economy Headquarters Base, Wuhou District, Chengdu",
       "hongkong": "Unit 87, 35th Floor, Infinitus Plaza, 199 Des Voeux Road, Sheung Wan, Hong Kong."
     }
   },
   "about": {
-    "title": "What is Jingle Will",
-    "titlePart1": "Jingle Will",
-    "titlePart2": "What is",
-    "intro": "Jingle Will (Beijing) Technology Co., Ltd. is a fintech company focused on overseas markets, dedicated to providing convenient, secure, and user-friendly inclusive financial services to users in developing countries worldwide through leading big data, cloud computing, and artificial intelligence technologies.",
-    "history": "Since its establishment in 2020, Jingle Will has continuously expanded its global business, rapidly achieving a leading position in multiple markets:",
+    "title": "What is Jinguo Future",
+    "titlePart1": "What is ",
+    "titlePart2": "Jinguo Future",
+    "intro": "Jinguo Future (Beijing) Technology Co., Ltd. is a fintech enterprise focusing on overseas markets, dedicated to providing convenient, safe, and user-friendly inclusive financial services to users in developing countries worldwide through leading big data, cloud computing, and artificial intelligence technologies.",
+    "history": "Since its establishment in 2020, Jinguo Future has continuously expanded its global business, rapidly achieving a leading position in multiple markets:",
     "milestones": {
-      "2021": "In 2021, entered Mexico and secured a top-three position in the industry;",
-      "2022": "In 2022, entered Colombia, where our app business captured a significant market share; launched the Peru project in the same year, ranking in the top five;",
-      "2023": "In 2023, officially launched in the Pakistan market and quickly rose to first place; entered Chile at the end of the year, showing continuous growth;",
-      "2025": "In 2025, expanded business to Indonesia, entering the top five in the industry; in September of the same year, launched in the Kenyan market;",
+      "2021": "In 2021, we entered Mexico and ranked among the top three in the industry;",
+      "2022": "In 2022, we entered Colombia, where our app business captured half of the market; in the same year, we launched our Peru project, consistently ranking in the top five;",
+      "2023": "In 2023, our Pakistan market officially launched and quickly rose to first place; at the end of the year, we entered Chile and continue to grow;",
+      "2025": "In 2025, our business expanded to Indonesia, entering the top five in the industry; in September of the same year, we launched in the Kenyan market;",
       "futureYear": "Future",
       "future": "We will also expand into more countries and regions such as Thailand, Egypt, India, and Ecuador."
     },
-    "compliance": "We place great importance on compliance and brand building. With comprehensive qualifications in Latin America and Southeast Asia, we are recognized as a benchmark for compliance in the region.",
-    "team": "Jingle Will has branches in Beijing, Chengdu, Hong Kong, and 8 overseas countries, with a team of 3,000 people. We value talent and continuously create an international development platform and diverse promotion channels for our employees. Outstanding talents have opportunities for exchange and work in Latin America, Southeast Asia, and other regions.",
-    "closing": "We continue to expand our global business footprint at a pace of one new market per year. If you are eager to participate in technological innovation and embrace global opportunities, welcome to join Jingle Will to grow with us and create the future together!"
+    "compliance": "We highly value compliance and brand building. We have comprehensive qualifications in Latin America and Southeast Asia and are recognized as a benchmark for compliance in the region.",
+    "team": "Jinguo Future has branches in Beijing, Chengdu, Hong Kong, and 8 overseas countries, with a team size of 3,000 people. We cherish talent and continuously create an international development platform and diverse promotion channels for our employees. Outstanding talents also have the opportunity to exchange and work in Latin America, Southeast Asia, and other regions.",
+    "closing": "We continue to expand our global business footprint at a rate of one new market per year. If you are eager to participate in technological innovation and embrace global opportunities, welcome to join Jinguo Future and grow with us to create the future!"
   },
   "technology": {
     "title": "Using AI to Bring Precise Change to the World",
-    "titlePart1": "Using AI to Bring the World",
-    "titlePart2": "Precise Change",
-    "subtitle": "Smart Intelligent Risk Control and Digital Solutions",
+    "titlePart1": "Using AI to bring precise change",
+    "titlePart2": "to the world",
+    "subtitle": "Smart risk control and digital solutions",
     "description": "Our technology is quietly driving change:",
-    "intro1": "We are Jingle Will, a global AI fintech company born in Beijing. Leveraging big data and AI technology, we provide smart intelligent risk control and digital solutions for emerging markets in Latin America, Southeast Asia, and Africa.",
-    "intro2": "Based in Beijing and Chengdu, with a presence in 7 major global capitals. We are both 'Tech Visionaries' and 'Financial Pragmatists,' continuously bringing smart, inclusive services to every corner of the world.",
-    "cta": "Jingle Will, waiting for you to join >",
+    "intro1": "We are Jinguo Future, a global AI fintech company born in Beijing. With big data and AI technology, we provide smart risk control and digital solutions for emerging markets in Latin America, Southeast Asia, and Africa.",
+    "intro2": "Based in Beijing and Chengdu, with a presence in 7 major capitals worldwide. We are both 'tech visionaries' and 'financial pragmatists,' continuously bringing smart, inclusive services to every corner of the world.",
+    "cta": "Jinguo Future, waiting for you to join >",
     "impact": {
       "redefine": "Redefining Possibilities",
-      "description": "Using algorithms, we have provided millions of users with their first-ever reliable digital credit service, making 'unserviceable' a thing of the past.",
+      "description": "Using algorithms, we have provided millions of users with their first reliable digital credit service, making 'unserviceable' a thing of the past.",
       "growth": "Building a Growth Engine",
-      "growthDesc": "Our intelligent system has become a powerful tool for partners entering new global markets, doubling operational efficiency and risk control capabilities.",
+      "growthDesc": "Our intelligent system has become a 'pioneering tool' for our partners to enter new global markets, doubling their operational efficiency and risk control capabilities.",
       "partner": "Being a Reliable Partner",
-      "partnerDesc": "Adhering to a 'Global Vision, Local Precision.' We delve deep into Mexico, Jakarta, Islamabad... strictly adhering to local compliance to build long-term trust in global markets."
+      "partnerDesc": "We adhere to a 'global vision, local precision' philosophy. We delve deep into markets like Mexico, Jakarta, and Islamabad, strictly adhering to local compliance to build long-term trust in the global market."
     }
   },
   "homepage": {
@@ -129,30 +129,30 @@
     "teammates": "Top Teammates",
     "globalBusiness": "Global Business Layout",
     "complianceAndTalent": "Compliance and Talent",
-    "saasTitle": "Global SaaS Platform, Opening a New Chapter in Efficient Operations",
-    "saasDescription": "The Jingle Will Cloud Platform supports multiple languages and end-to-end business management, making your financial operations more controllable, efficient, and precise in the global market.",
+    "saasTitle": "Global SaaS Platform, Opening a New Chapter of Efficient Operations",
+    "saasDescription": "The Jinguo Future Cloud Platform supports multiple languages and full-process business management, making your financial business more controllable, efficient, and precise in the global market.",
     "saasIntegration": "Intelligent Tool Integration",
-    "saasIntegrationDesc": "Integrates multi-dimensional tools like data analysis, smart outreach, and third-party risk control. Empowered by big data AI, it achieves integrated management of marketing, customer relations, and performance, effectively reducing risks and comprehensively improving operational efficiency.",
-    "adsTitle": "Precise Advertising, Connecting with Global Users",
-    "adsDescription": "Covering mainstream media resources worldwide, combined with third-party tracking and anti-fraud tools, we provide high-conversion, precisely targeted global advertising services for your product.",
+    "saasIntegrationDesc": "Integrates multi-dimensional tools such as data analysis, smart outreach, and third-party risk control. Empowered by big data and AI, it achieves integrated management of marketing, customer relations, and performance, effectively reducing risks and comprehensively improving operational efficiency.",
+    "adsTitle": "Precise Advertising to Connect with Global Users",
+    "adsDescription": "Covering mainstream media resources worldwide, combined with third-party tracking and anti-fraud tools, we provide high-conversion, precisely targeted global advertising services for your products.",
     "adsTargeting": "Multi-dimensional Smart Targeting",
-    "adsTargetingDesc": "Supports multi-dimensional targeting by country, device, browser, time, and interest to accurately filter audiences, effectively increasing ROI and making every penny of your budget count.",
-    "adsCreative": "End-to-End Creative Support",
-    "adsCreativeDesc": "From ad creative planning and material production to DSP channel delivery, we provide performance marketing solutions like CPI, CPA, and CPS to help products quickly reach the global market.",
-    "riskTitle": "Intelligent Risk Control, Safeguarding Business Security",
+    "adsTargetingDesc": "Supports multi-dimensional targeting including country, device, browser, time, and interests to accurately filter audiences, effectively increasing ROI and making every penny of your budget count.",
+    "adsCreative": "Full-process Creative Support",
+    "adsCreativeDesc": "From ad creative planning and material production to DSP channel delivery, we provide performance marketing solutions like CPI, CPA, and CPS to help your product quickly expand into the global market.",
+    "riskTitle": "Intelligent Risk Control to Safeguard Your Business",
     "riskDescription": "Integrates a multi-dimensional data risk control system to provide real-time risk assessment and warning services, helping enterprises effectively identify fraudulent behavior and build a secure and trustworthy business environment.",
     "riskMonitoring": "Comprehensive Risk Monitoring",
     "riskMonitoringDesc": "Combines multi-dimensional data such as device fingerprinting, behavioral analysis, and credit assessment to identify abnormal transactions and fraud risks in real-time, providing intelligent risk warnings and decision support.",
     "riskDecision": "Data-Driven Decisions",
-    "riskDecisionDesc": "Integrates multi-source data like third-party credit bureaus and blacklists, continuously optimizing risk control strategies through machine learning models to provide a solid guarantee for business growth."
+    "riskDecisionDesc": "Integrates multi-source data from third-party credit bureaus, blacklists, etc., and continuously optimizes risk control strategies through machine learning models to provide a solid guarantee for business growth."
   },
   "services": {
     "title": "Three Core Service Systems",
     "learnMore": "Learn More"
   },
   "saas": {
-    "title": "SaaS Platform Services",
-    "description": "The Jinguo SaaS Cloud Platform is a multi-language, end-to-end software system designed for risk control enterprises to conduct financial business. By integrating various intelligent tools, data, SMS outreach, voice calls, and third-party risk control, it makes business operations controllable, efficient, convenient, and precise. The system integrates marketing, customer, and employee performance management, and uses big data analysis to connect with AI, reducing customer risk and improving management levels.",
+    "title": "SaaS Platform Service",
+    "description": "The Jinguo SaaS Cloud Platform is a multi-language, full-process software system that facilitates financial business for risk control enterprises. By integrating various intelligent tools, data, SMS outreach, voice calls, and third-party risk control, it makes business operations controllable, efficient, convenient, and precise. The system combines marketing management, customer management, and employee performance management, using big data analysis to connect with AI, reduce customer risk, and improve management levels.",
     "components": {
       "title": "SaaS Products",
       "touch": "Smart Outreach",
@@ -162,8 +162,8 @@
     },
     "features": {
       "innovation": {
-        "title": "Multi-language, End-to-End Business Support",
-        "description": "Provides a multi-language, end-to-end system to help risk control enterprises conduct financial business, achieving controllable and efficient operations."
+        "title": "Multi-language, Full-Process Business Support",
+        "description": "Provides a multi-language, full-process system to help risk control enterprises conduct financial business, achieving controllable and efficient operations."
       },
       "tool": {
         "title": "Multi-dimensional Intelligent Tool Integration",
@@ -171,28 +171,28 @@
       },
       "management": {
         "title": "Integrated Management of Marketing, Customers, and Performance",
-        "description": "Merges marketing, customer, and employee performance management, relying on big data to optimize operations."
+        "description": "Combines marketing, customer, and employee performance management, relying on big data to optimize operations."
       },
       "ai": {
-        "title": "Big Data AI Empowers Risk Control Enhancement",
-        "description": "Connects with AI through big data analysis to reduce customer risk and enhance enterprise management levels."
+        "title": "Big Data AI Empowered Risk Control Enhancement",
+        "description": "Connects with AI through big data analysis to reduce customer risk and improve enterprise management levels."
       }
     }
   },
   "ads": {
-    "title": "Media Channel Advertising Services",
-    "description": "We can place client ads in multiple countries and regions worldwide, covering major global app and website media resources. Combined with third-party tracking statistics and anti-fraud traffic tools, we help clients rapidly promote their products or services globally, providing high-conversion and precise media advertising services.",
+    "title": "Media Channel Advertising Service",
+    "description": "We can deliver our clients' ads to multiple countries and regions worldwide, covering mainstream app and website media resources. Combined with third-party tracking statistics and anti-fraud traffic tools, we help clients quickly promote their products or services globally, providing high-conversion and precise media advertising services.",
     "components": {
-      "title": "Advertising Agency Services",
+      "title": "Advertising Services",
       "cpi": "CPI, CPA, CPS Performance Marketing",
       "ad": "Ad Creative Planning",
-      "dsp": "DSP Channel Placement",
-      "material": "Creative Materials and Copywriting"
+      "dsp": "DSP Channel Delivery",
+      "material": "Creative Materials & Copywriting"
     },
     "features": {
       "keyword": {
         "title": "Keyword Targeting",
-        "description": "Place ads based on keywords; ads will only be displayed on media relevant to those keywords."
+        "description": "Deliver ads based on keywords; ads will only be displayed on media relevant to those keywords."
       },
       "country": {
         "title": "Country Targeting",
@@ -200,15 +200,15 @@
       },
       "device": {
         "title": "Device Targeting",
-        "description": "Deliver ads to various devices, including Android, iOS, PC, and Smart TVs."
+        "description": "Deliver ads to various devices, including Android / iOS / PC / Smart TV."
       },
       "browser": {
         "title": "Browser Targeting",
-        "description": "Create specific visitor and exclusion lists to push ads to particular users."
+        "description": "Push ads to specific users by creating visitor inclusion and exclusion lists."
       },
       "time": {
-        "title": "Time Targeting",
-        "description": "Select specific delivery periods, either certain times of the day or specific days of the week."
+        "title": "Time Scheduling",
+        "description": "Choose specific time slots for ad delivery, specifying certain times of the day or certain days of the week."
       },
       "fun": {
         "title": "Interest Targeting",
@@ -217,8 +217,8 @@
     }
   },
   "riskControl": {
-    "title": "Intelligent Risk Control Data Services",
-    "description": "Based on our mastery of risk control business and research into big data technology, we have developed a comprehensive intelligent risk control data service system. This system, designed to expand into anti-fraud and anti-money laundering scenarios, includes a lightweight and scalable built-in risk control model that effectively meets risk control needs under various business growth conditions. Data services include the integration of internal and external data, processing of risk indicators, risk control strategy services, and risk monitoring. On the tool level, it supports the integration of commercial tools and the development of proprietary tools.",
+    "title": "Intelligent Risk Control Data Service",
+    "description": "Based on our mastery of risk control business and research in big data technology, we have developed a comprehensive intelligent risk control data service system. This system includes a lightweight and extensible risk control model to address scenarios like anti-fraud and anti-money laundering, effectively meeting risk control needs under various business growth situations. The data service includes integration of internal and external data, processing of risk indicators, risk control strategy services, and risk monitoring. On the tool side, it supports the integration of commercial tools and the development of proprietary tools.",
     "components": {
       "title": "Product Composition",
       "model": "Risk Control Model",
@@ -228,46 +228,50 @@
     },
     "features": {
       "innovation": {
-        "title": "Continuous Enrichment and Improvement of Innovative Solutions",
-        "description": "Continuously improve model scenarios and label libraries according to market developments to maintain the innovation and advancement of our data services."
+        "title": "Continuously Enriching and Innovating Solutions",
+        "description": "We constantly improve model scenarios and label libraries according to market developments to maintain the innovation and advancement of our data services."
       },
       "consulting": {
         "title": "Integrated Consulting and Implementation Services",
         "description": "With a professional consulting team, feasible implementation plans, and mature products, we provide professional, integrated consulting and implementation services."
       },
       "platform": {
-        "title": "Applicable to Various Basic Platforms",
-        "description": "Suitable for various basic platforms, such as traditional MPP platforms, Hadoop platforms, cloud platforms, etc."
+        "title": "Applicable to Various Base Platforms",
+        "description": "Suitable for various base platforms, such as traditional MPP platforms, Hadoop platforms, cloud platforms, etc."
       },
       "management": {
-        "title": "End-to-End Closed-Loop Risk Control Management Solution",
-        "description": "End-to-end risk control data services covering the entire lifecycle of the client's product."
+        "title": "Full-Process Closed-Loop Risk Control Management",
+        "description": "Provides full-process risk control data services covering the entire lifecycle of the client's product."
       }
     }
   },
   "aboutUs": {
     "section1": {
-      "title": "Dare to Join Us and Redefine Global Fintech?",
-      "description": "Jingle Will - A rapidly expanding global 'Tech+Finance' powerhouse, recruiting the strongest teammates",
+      "title": "Hey, dare to join us and level-up the world of fintech?",
+      "description": "Jinguo Future, a rapidly expanding global 'Tech + Finance' giant, is recruiting the strongest teammates.",
       "joinUs": "Apply Now"
     },
     "section2": {
-      "title": "Breaking Traditional Boundaries, Building a Global Fintech Arena",
-      "description": "AI-powered risk control, waiting for you to join the team",
-      "content": "We're not a traditional financial company or an old-school tech factory. We are Jingle Will, the perfect combination of 'Tech Innovation' and 'Financial Execution'! We deconstruct finance with code, reshape risk control with AI, and dominate global markets. Now, we've built dual-engine headquarters in Beijing and Chengdu, and lit up the map at 7 global battlefields including Mexico City, Jakarta, and Islamabad.",
-      "contentFooter": "Over 3,000 top talents have assembled globally. Next step? We're waiting for you!"
+      "title": "An Unconventional Approach to Building a Global Tech-Finance Battlefield",
+      "description": "AI is reshaping risk control, and we need you to join the team.",
+      "content": "This isn't a traditional financial company, nor is it an old-school tech firm. We are Jinguo Future, a combination of 'tech vision' and 'financial pragmatism'! We deconstruct finance with code, reshape risk control with AI, and master the global market. We have established dual-engine headquarters in Beijing and Chengdu, and have lit up the map in 7 major global markets including Mexico City, Jakarta, and Islamabad.",
+      "contentFooter": "Over 3,000 top teammates have already assembled globally. What's next? We're just missing you!"
     },
     "section3": {
-      "title": "This 'Instance' Experience is Maxed Out",
-      "description": "Team up to unlock global fintech challenges",
-      "part1Titel": "Global Mode from Day One",
-      "part1Description": "Your code, strategies, and products will be deployed directly on the frontlines of emerging markets like Mexico, Pakistan, and Kenya. You're not just working—you're providing millions of users with unprecedented financial services. That sense of achievement? Top-tier!",
-      "part2Titel": "Experience Points Going Crazy +1",
-      "part2Description": "Business doubles every year, new markets every year. This means your growth rate must keep up with our expansion speed! Here, there's no ceiling—only challenges and opportunities you can't imagine.",
-      "part3Titel": "Legendary Gear, Output Maxed",
-      "part3Description": "Worried about outdated tech? Not here! Big data, cloud computing, and AI models are our standard configuration. Here, you can freely leverage top resources and turn your wildest ideas into reality.",
+      "title": "The Experience Here is Max-Level",
+      "description": "Team up to unlock new levels in global tech-finance.",
+      "part1Titel": "Start in Global Mode",
+      "part1Description": "Your code, strategies, and products will be deployed directly on the front lines of emerging markets like Mexico, Pakistan, and Kenya. You're not just working; you're providing unprecedented financial services to millions of users. The sense of accomplishment is top-tier!",
+      "part2Titel": "Experience Points +++",
+      "part2Description": "Our business doubles annually, with new markets added every year. This means your growth must keep pace with our expansion! Here, there's no ceiling, only challenges and opportunities beyond your imagination.",
+      "part3Titel": "Top-Tier Gear for Max Output",
+      "part3Description": "Worried about outdated technology? Not here! Big data, cloud computing, and large AI models are our standard equipment. Here, you can freely use top resources to turn your brilliant ideas into reality.",
       "part4Titel": "Flat Culture, No Bureaucracy",
-      "part4Description": "We care about your ideas, not your title. Whether in Beijing, Chengdu, or Mexico offices, we advocate for direct, open, and collaborative atmosphere. Your voice matters."
+      "part4Description": "We care about your ideas, not your title. Whether in our Beijing, Chengdu, or Mexico City offices, we advocate a direct, open, and collaborative atmosphere. Your voice is important."
     }
+  },
+  "contact": {
+    "title": "You bring the talent, we'll provide the stage.",
+    "description": "Jinguo Future is waiting for you!"
   }
 }
