@@ -56,22 +56,6 @@ const RichTextEditor = ({ value, onChange, placeholder }) => {
         .mil-rich-text-editor .ql-editor {
           min-height: 240px;
         }
-        .mil-rich-text-editor .ql-toolbar button,
-        .mil-rich-text-editor .ql-toolbar .ql-picker-label,
-        .mil-rich-text-editor .ql-toolbar .ql-picker-item {
-          cursor: pointer;
-          pointer-events: auto;
-        }
-        .mil-rich-text-editor .ql-picker-options {
-          cursor: pointer;
-          pointer-events: auto;
-        }
-        .mil-rich-text-editor .ql-picker.ql-expanded {
-          position: relative;
-        }
-        .mil-rich-text-editor .ql-picker.ql-expanded .ql-picker-options {
-          pointer-events: auto;
-        }
       `}</style>
     </div>
   );

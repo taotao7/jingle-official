@@ -7,8 +7,9 @@ const jobsQueryKey = (locale) => ["jobs", locale];
 export const useJobs = (locale) => {
   return useQuery({
     queryKey: jobsQueryKey(locale),
+    refetchOnMount: "always",
     queryFn: async () => {
-      const res = await fetch(`/api/jobs?locale=${locale}`);
+      const res = await fetch(`/api/jobs?locale=${locale}&published=false`);
       if (!res.ok) {
         throw new Error("Failed to load jobs");
       }

@@ -15,13 +15,11 @@ const queryClient = new QueryClient();
 const initialFormState = {
   id: null,
   title: "",
-  slug: "",
   location: "",
   salaryRange: "",
   employmentType: "",
   summary: "",
   content: "",
-  published: true,
   priority: 0,
 };
 
@@ -76,9 +74,14 @@ const JobsPageInner = ({ locale }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await upsertJob.mutateAsync(formState);
-    setFormState(initialFormState);
-    setIsEditing(false);
+    try {
+      await upsertJob.mutateAsync({ ...formState, published: true });
+      setFormState(initialFormState);
+      setIsEditing(false);
+      setError(null);
+    } catch (error) {
+      setError(t("saveError"));
+    }
   };
 
   const handleEdit = (job) => {
@@ -175,6 +178,47 @@ const JobsPageInner = ({ locale }) => {
   return (
     <div className="mil-admin-jobs">
       <div className="mil-admin-cards">
+        <section className="mil-admin-list-card">
+          <header>
+            <h2>{t("listTitle")}</h2>
+          </header>
+          {isLoading && <p>{loadingLabel}</p>}
+          {isError && <p className="mil-error">{loadingErrorLabel}</p>}
+          {!isLoading && !isError && jobs.length === 0 && <p>{emptyLabel}</p>}
+          <ul className="mil-job-list">
+            {jobs.map((job) => (
+              <li key={job.id} className="mil-job-item">
+                <div>
+                  <h3>{job.title}</h3>
+                  <p className="mil-job-meta">
+                    {job.location && <span>{job.location}</span>}
+                    {job.employmentType && <span>{job.employmentType}</span>}
+                    {job.salaryRange && <span>{job.salaryRange}</span>}
+                    <span>{job.published ? publishedLabel : draftLabel}</span>
+                  </p>
+                </div>
+                <div className="mil-job-actions">
+                  <button
+                    type="button"
+                    className="mil-btn mil-sm mil-light"
+                    onClick={() => handleEdit(job)}
+                  >
+                    {editLabel}
+                  </button>
+                  <button
+                    type="button"
+                    className="mil-btn mil-sm mil-danger"
+                    onClick={() => handleDelete(job.id)}
+                    disabled={deleteJob.isPending}
+                  >
+                    {deleteLabel}
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="mil-admin-form-card">
           <header>
             <h2>{t("formTitle")}</h2>
@@ -192,30 +236,17 @@ const JobsPageInner = ({ locale }) => {
             )}
           </header>
           <form onSubmit={handleSubmit} className="mil-form">
-            <div className="mil-field-row">
-              <label className="mil-field">
-                <span>{t("fields.title")}</span>
-                <input
-                  required
-                  type="text"
-                  className="mil-input"
-                  value={formState.title}
-                  onChange={(event) =>
-                    handleChange("title", event.target.value)
-                  }
-                />
-              </label>
-              <label className="mil-field">
-                <span>{t("fields.slug")}</span>
-                <input
-                  required
-                  type="text"
-                  className="mil-input"
-                  value={formState.slug}
-                  onChange={(event) => handleChange("slug", event.target.value)}
-                />
-              </label>
-            </div>
+            {error && <p className="mil-error-banner">{error}</p>}
+            <label className="mil-field">
+              <span>{t("fields.title")}</span>
+              <input
+                required
+                type="text"
+                className="mil-input"
+                value={formState.title}
+                onChange={(event) => handleChange("title", event.target.value)}
+              />
+            </label>
             <div className="mil-field-row">
               <label className="mil-field">
                 <span>{t("fields.location")}</span>
@@ -283,17 +314,7 @@ const JobsPageInner = ({ locale }) => {
                 placeholder={t("fields.content")}
               />
             </label>
-            <div className="mil-field-row mil-field-row--bottom">
-              <label className="mil-toggle">
-                <input
-                  type="checkbox"
-                  checked={formState.published}
-                  onChange={(event) =>
-                    handleChange("published", event.target.checked)
-                  }
-                />
-                <span>{t("fields.published")}</span>
-              </label>
+            <div className="mil-form-footer">
               <button
                 type="submit"
                 className="mil-btn mil-m"
@@ -304,55 +325,22 @@ const JobsPageInner = ({ locale }) => {
             </div>
           </form>
         </section>
-
-        <section className="mil-admin-list-card">
-          <header>
-            <h2>{t("listTitle")}</h2>
-          </header>
-          {isLoading && <p>{loadingLabel}</p>}
-          {isError && <p className="mil-error">{loadingErrorLabel}</p>}
-          {!isLoading && !isError && jobs.length === 0 && <p>{emptyLabel}</p>}
-          <ul className="mil-job-list">
-            {jobs.map((job) => (
-              <li key={job.id} className="mil-job-item">
-                <div>
-                  <h3>{job.title}</h3>
-                  <p className="mil-job-meta">
-                    {job.location && <span>{job.location}</span>}
-                    {job.employmentType && <span>{job.employmentType}</span>}
-                    {job.salaryRange && <span>{job.salaryRange}</span>}
-                    <span>{job.published ? publishedLabel : draftLabel}</span>
-                  </p>
-                </div>
-                <div className="mil-job-actions">
-                  <button
-                    type="button"
-                    className="mil-btn mil-sm mil-light"
-                    onClick={() => handleEdit(job)}
-                  >
-                    {editLabel}
-                  </button>
-                  <button
-                    type="button"
-                    className="mil-btn mil-sm mil-danger"
-                    onClick={() => handleDelete(job.id)}
-                    disabled={deleteJob.isPending}
-                  >
-                    {deleteLabel}
-                  </button>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
       </div>
 
       <style jsx>{`
         .mil-admin-cards {
           display: grid;
-          gap: 24px;
-          grid-template-columns: minmax(0, 1fr);
+          gap: 28px;
+          grid-template-columns: 380px 1fr;
+          align-items: start;
         }
+
+        @media (max-width: 1200px) {
+          .mil-admin-cards {
+            grid-template-columns: 1fr;
+          }
+        }
+
         .mil-admin-form-card,
         .mil-admin-list-card {
           background: #fff;
@@ -360,6 +348,14 @@ const JobsPageInner = ({ locale }) => {
           padding: 24px;
           box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
         }
+
+        .mil-admin-list-card {
+          position: sticky;
+          top: 24px;
+          max-height: calc(100vh - 48px);
+          overflow-y: auto;
+        }
+
         .mil-admin-form-card header,
         .mil-admin-list-card header {
           display: flex;
@@ -372,13 +368,18 @@ const JobsPageInner = ({ locale }) => {
           flex-direction: column;
           gap: 20px;
         }
+        .mil-error-banner {
+          margin: 0;
+          padding: 12px 16px;
+          border-radius: 14px;
+          background: rgba(239, 68, 68, 0.12);
+          color: #b91c1c;
+          font-weight: 600;
+        }
         .mil-field-row {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 16px;
-        }
-        .mil-field-row--bottom {
-          align-items: center;
         }
         .mil-field {
           display: flex;
@@ -406,11 +407,10 @@ const JobsPageInner = ({ locale }) => {
         .mil-textarea {
           resize: vertical;
         }
-        .mil-toggle {
+        .mil-form-footer {
           display: flex;
-          align-items: center;
-          gap: 10px;
-          font-weight: 600;
+          justify-content: flex-end;
+          padding-top: 8px;
         }
         .mil-btn {
           border: none;

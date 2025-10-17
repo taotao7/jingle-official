@@ -23,10 +23,13 @@
       "saving": "Saving...",
       "loading": "Loading...",
       "loadingError": "Failed to load data",
+      "slugExists": "Slug already exists. Please choose another.",
       "saveError": "Failed to save job",
       "deleteError": "Failed to delete job",
       "delete": "Delete",
       "edit": "Edit",
+      "published": "Published",
+      "draft": "Draft",
       "confirmDelete": "Are you sure you want to delete this job?",
       "empty": "No jobs yet",
       "invalidCredentials": "Incorrect username or password",
@@ -40,8 +43,7 @@
         "employment": "Employment Type",
         "priority": "Priority",
         "summary": "Summary",
-        "content": "Content",
-        "published": "Published"
+        "content": "Content"
       }
     }
   },

@@ -21,7 +21,6 @@ const sanitizePayload = (payload) => {
     typeof payload.locale === "string" ? payload.locale.trim() : "";
   const locale = locales.includes(rawLocale) ? rawLocale : locales[0];
 
-  const slug = String(payload.slug || "").trim();
   const title = String(payload.title || "").trim();
 
   const location = payload.location ? String(payload.location).trim() : null;
@@ -41,7 +40,6 @@ const sanitizePayload = (payload) => {
   return {
     id: payload.id ? Number(payload.id) : undefined,
     locale,
-    slug,
     title,
     location: location || null,
     salaryRange: salaryRange || null,
@@ -54,9 +52,6 @@ const sanitizePayload = (payload) => {
 };
 
 const ensureRequiredFields = (data) => {
-  if (!data.slug) {
-    throw new Error("Slug is required");
-  }
   if (!data.title) {
     throw new Error("Title is required");
   }
