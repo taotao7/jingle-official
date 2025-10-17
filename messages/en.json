@@ -9,6 +9,53 @@
     "career": "Career",
     "publication": "Publication"
   },
+  "admin": {
+    "title": "Admin Panel",
+    "jobs": {
+      "loginTitle": "Admin Login",
+      "username": "Username",
+      "password": "Password",
+      "unlock": "Unlock",
+      "formTitle": "Publish Job",
+      "listTitle": "Job Listings",
+      "createNew": "Create New",
+      "save": "Save Job",
+      "saving": "Saving...",
+      "loading": "Loading...",
+      "loadingError": "Failed to load data",
+      "saveError": "Failed to save job",
+      "deleteError": "Failed to delete job",
+      "delete": "Delete",
+      "edit": "Edit",
+      "confirmDelete": "Are you sure you want to delete this job?",
+      "empty": "No jobs yet",
+      "invalidCredentials": "Incorrect username or password",
+      "loginFailed": "Unable to reach the login service. Please try again.",
+      "loggingIn": "Signing in...",
+      "fields": {
+        "title": "Title",
+        "slug": "Slug",
+        "location": "Location",
+        "salary": "Salary Range",
+        "employment": "Employment Type",
+        "priority": "Priority",
+        "summary": "Summary",
+        "content": "Content",
+        "published": "Published"
+      }
+    }
+  },
+  "jobs": {
+    "sectionTitle": "Join Our Team",
+    "sectionSubtitle": "We are hiring talented teammates to build the future of global fintech.",
+    "cta": "Apply Now",
+    "empty": "No open positions at the moment.",
+    "location": "Location",
+    "employment": "Type",
+    "salary": "Salary",
+    "published": "Published",
+    "draft": "Draft"
+  },
   "nav": {
     "home": "Home",
     "pages": "Pages",

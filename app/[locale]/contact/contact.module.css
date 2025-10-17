@@ -1,0 +1,129 @@
+.jobSection {
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  padding-top: 80px;
+}
+
+.jobSectionHead {
+  margin-bottom: 40px;
+}
+
+.jobSectionTitleRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.jobSectionTitle {
+  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: 600;
+}
+
+.jobSectionSubtitle {
+  max-width: 640px;
+}
+
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.jobCard {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.jobCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.jobCardTitle {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.jobCardSummary {
+  margin: 0;
+  color: #64748b;
+}
+
+.jobCardMeta {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.jobCardMetaItem {
+  background: rgba(15, 23, 42, 0.05);
+  border-radius: 999px;
+  padding: 6px 14px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.jobCardLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.6);
+  text-transform: uppercase;
+}
+
+.jobCardValue {
+  font-size: 14px;
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.jobCardContent :global(p) {
+  margin-bottom: 12px;
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.7;
+}
+
+.jobCardContent :global(ul),
+.jobCardContent :global(ol) {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.jobCardContent :global(li) {
+  margin-bottom: 6px;
+}
+
+.jobCardContent :global(h3),
+.jobCardContent :global(h4) {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .jobCard {
+    padding: 24px;
+  }
+
+  .jobCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jobSectionTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

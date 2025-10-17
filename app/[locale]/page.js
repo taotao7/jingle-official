@@ -14,6 +14,7 @@ const page = () => {
   const ads = useTranslations("ads");
   const riskControl = useTranslations("riskControl");
   const home = useTranslations("homepage");
+
   return (
     <PlaxLayout>
       {/* banner */}

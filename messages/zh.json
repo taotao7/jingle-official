@@ -9,6 +9,53 @@
     "career": "职位",
     "publication": "出版"
   },
+  "admin": {
+    "title": "后台管理",
+    "jobs": {
+      "loginTitle": "后台登录",
+      "username": "账号",
+      "password": "密码",
+      "unlock": "进入管理",
+      "formTitle": "岗位发布",
+      "listTitle": "岗位列表",
+      "createNew": "新增",
+      "save": "保存岗位",
+      "saving": "保存中...",
+      "loading": "加载中...",
+      "loadingError": "加载失败",
+      "saveError": "保存失败",
+      "deleteError": "删除失败",
+      "delete": "删除",
+      "edit": "编辑",
+      "confirmDelete": "确认删除这条岗位信息？",
+      "empty": "暂无岗位",
+      "invalidCredentials": "账号或密码错误",
+      "loginFailed": "登录服务暂时不可用，请稍后再试",
+      "loggingIn": "正在登录...",
+      "fields": {
+        "title": "标题",
+        "slug": "Slug",
+        "location": "工作地点",
+        "salary": "薪资范围",
+        "employment": "岗位性质",
+        "priority": "优先级",
+        "summary": "简介",
+        "content": "详细描述",
+        "published": "立即发布"
+      }
+    }
+  },
+  "jobs": {
+    "sectionTitle": "加入我们",
+    "sectionSubtitle": "我们正在寻找优秀的伙伴，共同打造全球金融科技的未来。",
+    "cta": "立即申请",
+    "empty": "暂时没有开放岗位。",
+    "location": "工作地点",
+    "employment": "岗位性质",
+    "salary": "薪资范围",
+    "published": "已发布",
+    "draft": "草稿"
+  },
   "nav": {
     "home": "首页",
     "pages": "页面",
@@ -220,5 +267,9 @@
       "part4Titel": "扁平文化,拒绝官僚",
       "part4Description": "我们关注你的想法,无非你的title。无论是北京、成都还是墨西哥的办公室,倡导直接、开放、协作的氛围。你的声音,很重要"
     }
+  },
+  "contact": {
+    "title": "你负责闪耀才华，我们负责提供舞台",
+    "description": "金果未来，等你加入!"
   }
 }

@@ -1,105 +1,114 @@
+import DOMPurify from "isomorphic-dompurify";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
 import { PageBanner } from "@/components/Banner";
-import { CallToAction2 } from "@/components/CallToAction";
 import PlaxLayout from "@/layouts/PlaxLayout";
-const page = () => {
+import { getJobs } from "@/lib/jobs";
+
+import styles from "./contact.module.css";
+
+const sanitizeHtml = (html) => {
+  return DOMPurify.sanitize(html ?? "");
+};
+
+const JobCard = ({ job, t }) => {
+  return (
+    <article className={`mil-job-card mil-up ${styles.jobCard}`}>
+      <header className={`${styles.jobCardHeader}`}>
+        <div>
+          <h3 className={`${styles.jobCardTitle}`}>{job.title}</h3>
+          {job.summary && (
+            <p className={`${styles.jobCardSummary}`}>{job.summary}</p>
+          )}
+        </div>
+        {/* <a
+          href={`mailto:hr@plax.network?subject=${encodeURIComponent(`Apply: ${job.title}`)}`}
+          className="mil-btn mil-sm"
+        >
+          {t("cta")}
+        </a> */}
+      </header>
+      <ul className={`${styles.jobCardMeta}`}>
+        {job.location && (
+          <li className={styles.jobCardMetaItem}>
+            <span className={styles.jobCardLabel}>{t("location")}</span>
+            <span className={styles.jobCardValue}>{job.location}</span>
+          </li>
+        )}
+        {job.employmentType && (
+          <li className={styles.jobCardMetaItem}>
+            <span className={styles.jobCardLabel}>{t("employment")}</span>
+            <span className={styles.jobCardValue}>{job.employmentType}</span>
+          </li>
+        )}
+        {job.salaryRange && (
+          <li className={styles.jobCardMetaItem}>
+            <span className={styles.jobCardLabel}>{t("salary")}</span>
+            <span className={styles.jobCardValue}>{job.salaryRange}</span>
+          </li>
+        )}
+      </ul>
+      <div
+        className={styles.jobCardContent}
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(job.content) }}
+      />
+    </article>
+  );
+};
+
+const page = async ({ params }) => {
+  const { locale } = params;
+  setRequestLocale(locale);
+
+  const jobs = await getJobs({ locale, publishedOnly: true });
+
+  const tContact = await getTranslations({ locale, namespace: "contact" });
+  const tJobs = await getTranslations({ locale, namespace: "jobs" });
+
   return (
     <PlaxLayout bg={false}>
       <PageBanner
-        pageName="Contact us"
-        title="Connect with Us: We are Here to Help You"
+        pageName={tContact("title")}
+        title={tContact("description")}
       />
 
-      {/* contact */}
       <div className="mil-blog-list mil-p-0-160">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-9">
-              <form>
-                <div className="row">
-                  <div className="col-md-6 mil-mb-30">
-                    <input
-                      className="mil-input mil-up"
-                      type="text"
-                      placeholder="Name"
-                      name="name"
-                    />
-                  </div>
-                  <div className="col-md-6 mil-mb-30">
-                    <input
-                      className="mil-input mil-up"
-                      type="email"
-                      placeholder="Email"
-                      name="email"
-                    />
-                  </div>
-                  <div className="col-xl-12 mil-mb-30">
-                    <input
-                      className="mil-input mil-up"
-                      type="tel"
-                      placeholder="Telephone number"
-                      name="tel"
-                    />
-                  </div>
-                  <div className="col-xl-12 mil-mb-30 ">
-                    <textarea
-                      cols={30}
-                      rows={10}
-                      className="mil-up"
-                      placeholder="Message"
-                      name="message"
-                      defaultValue={""}
-                    />
+              <div
+                className={`mil-job-section mil-p-160-0 ${styles.jobSection}`}
+              >
+                <div className={`${styles.jobSectionHead} mil-up`}>
+                  <div className={styles.jobSectionTitleRow}>
+                    <div>
+                      <h2 className={styles.jobSectionTitle}>
+                        {tJobs("sectionTitle")}
+                      </h2>
+                      <p
+                        className={`${styles.jobSectionSubtitle} mil-text-m mil-soft`}
+                      >
+                        {tJobs("sectionSubtitle")}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mil-checkbox-frame mil-mb-30 mil-up">
-                  <div className="mil-checkbox">
-                    <input
-                      type="checkbox"
-                      id="checkbox"
-                      name="checkmark"
-                      defaultChecked=""
-                    />
-                    <label htmlFor="checkbox" />
+                {jobs.length === 0 ? (
+                  <p className="mil-up mil-text-m mil-soft">{tJobs("empty")}</p>
+                ) : (
+                  <div className={styles.jobGrid}>
+                    {jobs.map((job) => (
+                      <JobCard key={job.id} job={job} t={tJobs} />
+                    ))}
                   </div>
-                  <p className="mil-text-xs mil-soft">
-                    I agree that the data submitted, collected and stored *
-                  </p>
-                </div>
-                <div className="mil-up">
-                  <button type="submit" className="mil-btn mil-m">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-              <div className="alert-success" style={{ display: "none" }}>
-                <h5>Thanks, your message is sent successfully.</h5>
-              </div>
-              <div className="mil-p-160-0">
-                <h5 className="mil-mb-30 mil-up">
-                  We are available on the following channels:
-                </h5>
-                <p className="mil-text-m mil-soft mil-mb-10 mil-up">
-                  Address: 999 Rue du Cherche-Midi, 7755500666 Paris, France
-                </p>
-                <p className="mil-text-m mil-soft mil-mb-10 mil-up">
-                  Telephone: +001 (808) 555-0111
-                </p>
-                <p className="mil-text-m mil-soft mil-mb-10 mil-up">
-                  Fax: +001 (808) 555-0112
-                </p>
-                <p className="mil-text-m mil-soft mil-up">
-                  Email: support@plax.network
-                </p>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* contact end */}
-      {/* call to action */}
-      <CallToAction2 />
-      {/* call to action end */}
     </PlaxLayout>
   );
 };
+
 export default page;

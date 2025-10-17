@@ -2,19 +2,21 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const Banner = ({
   title,
   subTitle,
   img = "img/home-2/1.png",
-  style = { maxWidth: "135%", transform: "translateX(5%)" },
+  style = { maxWidth: "150%", transform: "translateX(10%)" },
   dark = false,
 }) => {
   const t = useTranslations("banner");
 
   const resolvedTitle = title ?? t("title");
   const resolvedSubtitle = subTitle ?? t("subtitle");
-
+  const params = useParams();
+  const locale = params?.locale || "zh";
   return (
     <div className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
       <div className="container">
@@ -39,7 +41,10 @@ const Banner = ({
                 {resolvedTitle}
               </h1>
               <div className="mil-buttons-frame">
-                <Link href="contact" className="mil-btn mil-md mil-add-arrow">
+                <Link
+                  href={`${locale}/contact`}
+                  className="mil-btn mil-md mil-add-arrow"
+                >
                   {t("joinNow")}
                 </Link>
               </div>
